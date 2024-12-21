@@ -1,0 +1,51 @@
+# バンドラーが生成する依存関係キャッシュ
+/vendor/bundle/
+
+# RSpecのテスト結果ログ
+/spec/examples.txt
+
+# macOS環境で生成されるシステムファイル
+.DS_Store
+
+# バイナリファイルや生成物
+*.so
+*.o
+*.a
+
+# ログファイル
+/log/*
+!.keep
+
+# 一時ファイルやキャッシュ
+/tmp/*
+!.keep
+
+# バージョン管理のための設定ファイルやデータベース
+/.bundle/
+/config/master.key
+/config/credentials.yml.enc
+
+# RubyGemキャッシュ
+*.gem
+
+# PryやIRBの履歴ファイル
+.pry_history
+.irb_history
+
+# Rubocopのリポートファイル
+.rubocop-https___*
+
+# カスタムIDEやエディタの設定ファイル
+.idea/
+.vscode/
+*.swp
+*~
+
+# Gitが一時的に生成するファイル
+*.orig
+
+# コンテナ関連ファイル (Dockerを使用している場合)
+docker-compose.override.yml
+
+# 一時的に利用することを想定しているのでロックファイルを除外
+Gemfile.lock
