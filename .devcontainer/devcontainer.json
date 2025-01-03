@@ -22,7 +22,8 @@
         "aaron-bond.better-comments",
         "shardulm94.trailing-spaces",
         "GitHub.github-vscode-theme",
-        "misogi.ruby-rubocop"
+        "misogi.ruby-rubocop",
+        "ms-vscode.live-server"
       ]
     }
   },
