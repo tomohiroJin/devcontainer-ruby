@@ -1,0 +1,11 @@
+{
+  "files.eol": "\n",
+  "cSpell.words": [
+    "devcontainers",
+    "Rubo",
+    "rubocop"
+  ],
+  "ruby.useLanguageServer": true,
+  "ruby.lsp.enabled": true,
+  "ruby.lsp.bundlerPath": "bundle"
+}
