@@ -1,51 +1,141 @@
-# Ruby 開発用 Dev Container
+# Devcontainer Ruby Reference
 
-このリポジトリは、Visual Studio Code の Dev Containers 機能を利用した Ruby 開発環境を提供します。事前に設定された環境を使用することで、効率的に Ruby の開発を進めることができます。
-
----
-
-## 特徴
-
-- **Ruby 環境**: 指定されたバージョンの Ruby 開発環境を簡単に構築。
-- **VS Code との統合**: Visual Studio Code の Dev Containers 機能に最適化され、シームレスな開発体験を提供。
-- **依存関係管理**: Bundler を使用して Gem の依存関係を簡単に管理。
+このリポジトリは、Ruby の開発環境を提供し、基本構文から制御構文、クラスの書き方、関数型プログラミングまで幅広い学習をサポートします。RuboCop によるコードスタイルチェックや Rspec を用いたテスト駆動開発を簡単に実行できる設定が含まれています。
 
 ---
 
-## 始め方
+## **目次**
 
-### 1. **リポジトリのクローン**
+1. [セットアップ](#セットアップ)
+2. [Rspec の使い方](#rspec-の使い方)
+3. [RDoc の生成](#rdoc-の生成)
+4. [Reference 一覧](#reference-一覧)
+5. [RuboCop の利用方法](#rubocop-の利用方法)
 
-ターミナルで以下のコマンドを実行してください:
+---
+
+## **セットアップ**
+
+### **必要なツール**
+
+- Docker
+- Visual Studio Code
+  - Dev Containers 拡張機能
+
+### **環境構築**
+
+1. リポジトリをクローンします。
+
+   ```bash
+   git clone https://github.com/tomohiroJin/devcontainer-ruby.git
+   cd devcontainer-ruby
+   ```
+
+2. VS Code でプロジェクトを開きます。
+3. `Dev Containers` 拡張機能を使ってコンテナ内で開発環境を起動します。
+
+---
+
+## **Rspec の使い方**
+
+このプロジェクトでは Rspec を使用してテストを実行します。
+
+### **テストの実行**
+
+1. 全テストを実行:
+
+   ```bash
+   rspec
+   ```
+
+2. 特定のテストファイルを実行:
+
+   ```bash
+   rspec spec/reference/loops_spec.rb
+   ```
+
+3. 特定の行番号のテストを実行:
+
+   ```bash
+   rspec spec/reference/loops_spec.rb:10
+   ```
+
+4. テスト結果を詳細に表示:
+
+   ```bash
+   rspec --format documentation
+   ```
+
+---
+
+## **RDoc の生成**
+
+RDoc を使用して、このプロジェクトのコードベースから HTML ドキュメントを生成します。
+
+### **手順**
+
+1. RDoc のセットアップ:
+   `Gemfile` に以下を追加済みです。
+
+   ```ruby
+   gem 'rdoc'
+   ```
+
+   必要に応じて以下を実行してください。
+
+   ```bash
+   bundle install
+   ```
+
+2. ドキュメントの生成:
+
+   ```bash
+   bundle exec rdoc
+   ```
+
+3. 生成されたドキュメントの確認:
+   `doc/index.html` をブラウザで開いてください。
+
+---
+
+## **Reference 一覧**
+
+以下は、このリポジトリで提供している Ruby の学習リファレンスの一覧です。詳細はリンク先の RDoc を参照してください。
+
+| 機能          | 概要                                       | 詳細 |
+|---------------|------------------------------------------|------|
+| 基本構文       | 変数、配列、ハッシュの基本操作を学ぶ         | [詳細](doc/Reference/BasicsSyntax.html) |
+| 制御構文       | if-else、case 文、三項演算子の使い方         | [詳細](doc/Reference/ControlFlow.html) |
+| ループ文       | while、until、each、times の使い方          | [詳細](doc/Reference/Loops.html) |
+| クラスの書き方  | 継承、抽象化、ポリモーフィズムの例           | [詳細](doc/Reference/Shape.html) |
+| 関数型         | 高階関数、ラムダ、イミュータブルデータ操作の例 | [詳細](doc/Reference/Functional.html) |
+
+---
+
+## **RuboCop の利用方法**
+
+このプロジェクトでは RuboCop を使用してコードの品質を保ちます。
+
+### **コードスタイルチェック**
 
 ```bash
-git clone https://github.com/tomohiroJin/devcontainer-ruby.git
-cd devcontainer-ruby
+rubocop
 ```
 
-### 2. **VS Code で開く**
+### **自動修正**
 
-- 最新版の [Visual Studio Code](https://code.visualstudio.com/) をインストールしてください。
-- [Dev Containers 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)をインストールしてください。
-- このリポジトリを VS Code で開き、`Dev Container` の再読み込みを求められたら承認します。
+```bash
+rubocop --auto-correct
+```
 
-### 3. **アプリケーションの実行**
+### **特定ファイルをチェック**
 
-- アプリケーションの実行や Rake タスクの実行が可能です。
-- 必要に応じてコンテナ内でスクリプトを実行してください。
-
----
-
-## カスタマイズ
-
-`.devcontainer/devcontainer.json` を編集することで、開発環境を自由にカスタマイズできます。例えば、Ruby のバージョンを変更する場合は、`Dockerfile` 内の `VARIANT` 引数を変更してください。
+```bash
+rubocop path/to/file.rb
+```
 
 ---
 
-## ライセンス
+## **ライセンス**
 
-このプロジェクトは MIT ライセンスの下で提供されています。詳細については [LICENSE](LICENSE) ファイルをご覧ください。
-
----
-
-このリポジトリを活用することで、VS Code と Docker による再現性・移植性の高い Ruby 開発環境を手軽に構築できます。是非活用してみてください。
+このリポジトリは MIT ライセンスの下で提供されています。

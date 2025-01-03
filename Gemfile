@@ -1,10 +1,10 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # 開発環境専用の gem
 group :development do
   # Solargraph: Ruby Language Server
-  gem 'solargraph', '~> 0.50.0'
   gem 'ruby-lsp'
+  gem 'solargraph', '~> 0.50.0'
 end
 
 # テスト環境専用の gem
@@ -13,7 +13,8 @@ group :test do
 end
 
 # 共通で使用する gem
-gem "rubocop", "~> 1.0", require: false # コード品質チェック
-gem 'rubocop-performance', require: false
-gem "rake", "~> 13.0"                   # ビルドツール
-gem "byebug"                            # デバッグツール
+gem 'byebug'                            # デバッグツール
+gem 'rake', '~> 13.0'                   # ビルドツール
+gem 'rdoc'                              # ドキュメント生成
+gem 'rubocop', '~> 1.0', require: false # コード品質チェック
+gem 'rubocop-performance', require: false # パフォーマンスチェック
