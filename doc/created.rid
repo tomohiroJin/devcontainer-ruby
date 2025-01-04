@@ -1,4 +1,4 @@
-Sat, 04 Jan 2025 15:03:50 +0000
+Sat, 04 Jan 2025 18:24:07 +0000
 /workspaces/devcontainer-ruby/Gemfile	Sat, 04 Jan 2025 14:40:05 +0000
 /workspaces/devcontainer-ruby/Gemfile.lock	Fri, 03 Jan 2025 19:32:14 +0000
 /workspaces/devcontainer-ruby/LICENSE	Sat, 21 Dec 2024 03:09:47 +0000
@@ -10,3 +10,9 @@ Sat, 04 Jan 2025 15:03:50 +0000
 /workspaces/devcontainer-ruby/lib/reference/basic/control_flow.rb	Sat, 04 Jan 2025 14:40:05 +0000
 /workspaces/devcontainer-ruby/lib/reference/basic/functional.rb	Sat, 04 Jan 2025 14:40:05 +0000
 /workspaces/devcontainer-ruby/lib/reference/basic/loops.rb	Sat, 04 Jan 2025 14:40:05 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/README.md	Sat, 04 Jan 2025 18:23:32 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/decorator.rb	Sat, 04 Jan 2025 17:58:52 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/factory.rb	Sat, 04 Jan 2025 18:09:37 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/observer.rb	Sat, 04 Jan 2025 17:47:41 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/strategy.rb	Sat, 04 Jan 2025 17:23:58 +0000
+/workspaces/devcontainer-ruby/lib/reference/patterns/template_method.rb	Sat, 04 Jan 2025 18:19:09 +0000
