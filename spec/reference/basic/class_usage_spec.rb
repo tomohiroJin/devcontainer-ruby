@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'reference/class_usage'
+require 'reference/basic/class_usage'
 
 RSpec.describe Reference::Shape do
   describe '抽象クラスの動作' do

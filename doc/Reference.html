@@ -182,6 +182,95 @@
 <span class="ruby-identifier">puts</span> <span class="ruby-identifier">loops</span>.<span class="ruby-identifier">times_loop</span>(<span class="ruby-value">3</span>) <span class="ruby-comment"># =&gt; [&quot;Message 1&quot;, &quot;Message 2&quot;, &quot;Message 3&quot;]</span>
 </pre>
 
+<p>Decorator パターンは、オブジェクトに動的に振る舞いを追加するデザインパターンです。</p>
+
+<p>この例では、メッセージを装飾する仕組みを示しています。</p>
+<ul><li>
+<p>元のメッセージにプレフィックスを追加する装飾</p>
+</li><li>
+<p>元のメッセージにサフィックスを追加する装飾</p>
+</li></ul>
+
+<p>使用例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">message</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleMessage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;Hello, World!&quot;</span>)
+<span class="ruby-identifier">decorated_message</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">PrefixDecorator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">message</span>, <span class="ruby-string">&quot;&gt;&gt;&gt; &quot;</span>)
+<span class="ruby-identifier">decorated_message</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">SuffixDecorator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">decorated_message</span>, <span class="ruby-string">&quot; &lt;&lt;&lt;&quot;</span>)
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">decorated_message</span>.<span class="ruby-identifier">content</span>
+<span class="ruby-comment"># =&gt; &gt;&gt;&gt; Hello, World! &lt;&lt;&lt;</span>
+</pre>
+
+<p>Factory パターンは、オブジェクト生成のロジックをカプセル化するデザインパターンです。</p>
+
+<p>この例では、異なる種類の通知オブジェクトを動的に生成する仕組みを示しています。</p>
+<ul><li>
+<p>EmailNotification: メール通知</p>
+</li><li>
+<p>SMSNotification: SMS 通知</p>
+</li></ul>
+
+<p>使用例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">factory</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">NotificationFactory</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">email</span> = <span class="ruby-identifier">factory</span>.<span class="ruby-identifier">create_notification</span>(<span class="ruby-value">:email</span>, <span class="ruby-string">&quot;Hello via Email&quot;</span>)
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">deliver</span>
+<span class="ruby-comment"># =&gt; Delivering Email: Hello via Email</span>
+
+<span class="ruby-identifier">sms</span> = <span class="ruby-identifier">factory</span>.<span class="ruby-identifier">create_notification</span>(<span class="ruby-value">:sms</span>, <span class="ruby-string">&quot;Hello via SMS&quot;</span>)
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">sms</span>.<span class="ruby-identifier">deliver</span>
+<span class="ruby-comment"># =&gt; Delivering SMS: Hello via SMS</span>
+</pre>
+
+<p>Observer パターンは、オブジェクト間の依存関係を管理し、あるオブジェクトの状態変更を他のオブジェクトに通知します。</p>
+
+<p>この例では、‘Subject` が状態を変更し、登録されたすべての `Observer` に通知を送る仕組みを示しています。</p>
+
+<p>使用例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">subject</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">Subject</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">observer1</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">ConcreteObserver</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Observer 1&#39;</span>)
+<span class="ruby-identifier">observer2</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">ConcreteObserver</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;Observer 2&#39;</span>)
+<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">add_observer</span>(<span class="ruby-identifier">observer1</span>)
+<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">add_observer</span>(<span class="ruby-identifier">observer2</span>)
+<span class="ruby-identifier">subject</span>.<span class="ruby-identifier">state</span> = <span class="ruby-string">&#39;New State&#39;</span>
+<span class="ruby-comment"># =&gt; Observer 1: State has been updated to &#39;New State&#39;</span>
+<span class="ruby-comment"># =&gt; Observer 2: State has been updated to &#39;New State&#39;</span>
+</pre>
+
+<p>Strategy パターンは、アルゴリズムを動的に切り替えることを目的としたデザインパターンです。</p>
+
+<p>この例では、料金計算のアルゴリズムを切り替える実装を示しています。</p>
+<ul><li>
+<p>標準料金</p>
+</li><li>
+<p>割引料金</p>
+</li><li>
+<p>プレミアム料金</p>
+</li></ul>
+
+<p>使用例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">calculator</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">PriceCalculator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">StandardStrategy</span>.<span class="ruby-identifier">new</span>)
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">calculator</span>.<span class="ruby-identifier">calculate</span>(<span class="ruby-value">100</span>) <span class="ruby-comment"># =&gt; 100</span>
+<span class="ruby-identifier">calculator</span>.<span class="ruby-identifier">set_strategy</span>(<span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">DiscountStrategy</span>.<span class="ruby-identifier">new</span>)
+<span class="ruby-identifier">puts</span> <span class="ruby-identifier">calculator</span>.<span class="ruby-identifier">calculate</span>(<span class="ruby-value">100</span>) <span class="ruby-comment"># =&gt; 80</span>
+</pre>
+
+<p>Template Method パターンは、アルゴリズムの骨格を定義し、具体的な処理をサブクラスに委譲するデザインパターンです。</p>
+
+<p>この例では、データ処理のテンプレートを定義し、異なる形式で出力を実装しています。</p>
+
+<p>使用例:</p>
+
+<pre class="ruby"><span class="ruby-identifier">processor</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">CSVProcessor</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">processor</span>.<span class="ruby-identifier">process</span>([<span class="ruby-string">&quot;Name, Age&quot;</span>, <span class="ruby-string">&quot;Alice, 30&quot;</span>, <span class="ruby-string">&quot;Bob, 25&quot;</span>])
+<span class="ruby-comment"># =&gt; CSV processing completed</span>
+
+<span class="ruby-identifier">processor</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONProcessor</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">processor</span>.<span class="ruby-identifier">process</span>([<span class="ruby-string">&quot;Name, Age&quot;</span>, <span class="ruby-string">&quot;Alice, 30&quot;</span>, <span class="ruby-string">&quot;Bob, 25&quot;</span>])
+<span class="ruby-comment"># =&gt; JSON processing completed</span>
+</pre>
+
   </section>
 
   <section id="5Buntitled-5D" class="documentation-section anchor-link">

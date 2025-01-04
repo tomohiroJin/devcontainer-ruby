@@ -5,25 +5,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>class Reference::Rectangle - RDoc Documentation</title>
+<title>class Reference::Patterns::ConcreteObserver - RDoc Documentation</title>
 
-  <meta name="keywords" content="ruby,class,Reference::Rectangle">
+  <meta name="keywords" content="ruby,class,Reference::Patterns::ConcreteObserver">
 
-    <meta name="description" content="class Reference::Rectangle: Rectangle.">
+    <meta name="description" content="class Reference::Patterns::ConcreteObserver: ConcreteObserver は Observer インターフェースを実装した具体的な観察者クラスです。">
 
 <script type="text/javascript">
-  var rdoc_rel_prefix = "../";
-  var index_rel_prefix = "../";
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
 </script>
 
-<script src="../js/navigation.js" defer></script>
-<script src="../js/search.js" defer></script>
-<script src="../js/search_index.js" defer></script>
-<script src="../js/searcher.js" defer></script>
-<script src="../js/darkfish.js" defer></script>
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
 
-<link href="../css/fonts.css" rel="stylesheet">
-<link href="../css/rdoc.css" rel="stylesheet">
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
 
 
 <body id="top" role="document" class="class">
@@ -36,13 +36,13 @@
   <div id="project-navigation">
     <div id="home-section" role="region" title="Quick navigation" class="nav-section">
   <h2>
-    <a href="../index.html" rel="home">Home</a>
+    <a href="../../index.html" rel="home">Home</a>
   </h2>
 
   <div id="table-of-contents-navigation">
-    <a href="../table_of_contents.html#pages">Pages</a>
-    <a href="../table_of_contents.html#classes">Classes</a>
-    <a href="../table_of_contents.html#methods">Methods</a>
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
   </div>
 </div>
 
@@ -67,7 +67,7 @@
   
   <div id="parent-class-section" class="nav-section">
   <h3>Ancestors</h3>
-  <ul><li><a href="Shape.html">Reference::Shape</a><ul><li>Object</li></ul></li></ul>
+  <ul><li><a href="Observer.html">Reference::Patterns::Observer</a><ul><li>Object</li></ul></li></ul>
 </div>
 
   
@@ -76,7 +76,7 @@
   <div class="nav-section">
     <h3>Class Methods</h3>
     <ul class="link-list" role="directory">
-      <li class="calls-super" ><a href="#method-c-new">new</a></li>
+      <li ><a href="#method-c-new">new</a></li>
     </ul>
   </div>
 
@@ -85,7 +85,7 @@
   <div class="nav-section">
     <h3>Instance Methods</h3>
     <ul class="link-list" role="directory">
-      <li ><a href="#method-i-area">area</a></li>
+      <li ><a href="#method-i-update">update</a></li>
     </ul>
   </div>
 
@@ -99,21 +99,14 @@
 
 </nav>
 
-<main role="main" aria-labelledby="class-Reference::Rectangle">
-  <h1 id="class-Reference::Rectangle" class="anchor-link class">
-    class Reference::Rectangle
+<main role="main" aria-labelledby="class-Reference::Patterns::ConcreteObserver">
+  <h1 id="class-Reference::Patterns::ConcreteObserver" class="anchor-link class">
+    class Reference::Patterns::ConcreteObserver
   </h1>
 
   <section class="description">
     
-<p><a href="Rectangle.html"><code>Rectangle</code></a> クラスは <a href="Shape.html"><code>Shape</code></a> を継承した長方形を表すクラス</p>
-
-<p>使用例:</p>
-
-<pre class="ruby"><span class="ruby-identifier">rectangle</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Rectangle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">4</span>, <span class="ruby-value">5</span>)
-<span class="ruby-identifier">puts</span> <span class="ruby-identifier">rectangle</span>.<span class="ruby-identifier">area</span> <span class="ruby-comment"># =&gt; 20</span>
-<span class="ruby-identifier">puts</span> <span class="ruby-identifier">rectangle</span>.<span class="ruby-identifier">description</span> <span class="ruby-comment"># =&gt; &quot;Shape: Rectangle&quot;</span>
-</pre>
+<p><a href="ConcreteObserver.html"><code>ConcreteObserver</code></a> は <a href="Observer.html"><code>Observer</code></a> インターフェースを実装した具体的な観察者クラスです。</p>
 
   </section>
 
@@ -133,7 +126,7 @@
             <div class="method-heading">
               <a href="#method-c-new" title="Link to this method">
                 <span class="method-name">new</span>
-                <span class="method-args">(width, height)</span>
+                <span class="method-args">(name)</span>
               </a>
             </div>
         </div>
@@ -146,20 +139,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 93</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
-  <span class="ruby-keyword">super</span>(<span class="ruby-string">&#39;Rectangle&#39;</span>)
-  <span class="ruby-ivar">@width</span> = <span class="ruby-identifier">width</span>
-  <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">height</span>
+            <pre><span class="ruby-comment"># File lib/reference/patterns/observer.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">name</span>) <span class="ruby-comment"># rubocop:disable Lint/MissingSuper</span>
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          <p>初期化</p>
-
-<p>@param width [Numeric] 幅@param height [Numeric] 高さ</p>
-            <div class="method-calls-super">
-              Calls superclass method
-              <a href="Shape.html#method-c-new"><code>Reference::Shape::new</code></a>
-            </div>
+          
         </div>
 
 
@@ -172,12 +157,12 @@
          <h3>Public Instance Methods</h3>
        </header>
 
-      <div id="method-i-area" class="method-detail anchor-link ">
+      <div id="method-i-update" class="method-detail anchor-link ">
         <div class="method-header">
             <div class="method-heading">
-              <a href="#method-i-area" title="Link to this method">
-                <span class="method-name">area</span>
-                <span class="method-args">()</span>
+              <a href="#method-i-update" title="Link to this method">
+                <span class="method-name">update</span>
+                <span class="method-args">(subject)</span>
               </a>
             </div>
         </div>
@@ -189,15 +174,15 @@
           </div>
 
         <div class="method-description">
-          <div class="method-source-code" id="area-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 102</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">area</span>
-  <span class="ruby-ivar">@width</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@height</span>
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File lib/reference/patterns/observer.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>(<span class="ruby-identifier">subject</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@name}: State has been updated to &#39;#{subject.state}&#39;&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          <p>面積を計算する</p>
+          <p>状態が更新された際に呼び出されます。</p>
 
-<p>@return [Numeric] 長方形の面積</p>
+<p>@param subject [Subject] 状態を持つ <a href="Subject.html"><code>Subject</code></a> オブジェクト</p>
         </div>
 
 

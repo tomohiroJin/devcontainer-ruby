@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'reference/loops'
+require 'reference/basic/loops'
 
 RSpec.describe Reference::Loops do
   let(:loops) { Reference::Loops.new }

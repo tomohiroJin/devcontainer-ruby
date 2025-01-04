@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'reference/functional'
+require 'reference/basic/functional'
 
 RSpec.describe Reference::Functional do
   let(:functional) { Reference::Functional.new }
