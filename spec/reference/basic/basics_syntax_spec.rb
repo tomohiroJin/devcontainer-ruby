@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'reference/basics_syntax'
+require 'reference/basic/basics_syntax'
 
 RSpec.describe Reference::BasicsSyntax do
   let(:basics) { Reference::BasicsSyntax.new }

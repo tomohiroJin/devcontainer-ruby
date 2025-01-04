@@ -8,7 +8,7 @@
 <title>README - RDoc Documentation</title>
 
   <meta name="keywords" content="ruby,documentation,README">
-  <meta name="description" content="README: Bundler を使用して Gem の依存関係を簡単に管理。 --- ## 始め方 ### 1. Name=ms-vscode-remote.">
+  <meta name="description" content="README: Devcontainer Ruby Reference このリポジトリは、Ruby の開発環境を提供し、基本構文から制御構文、クラスの書き方、関数型プログラミングまで幅広い学習をサポートします。RuboCop によるコードスタイルチェックや Rspec を用いたテスト駆動開発を簡単に実行できる設定">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -71,24 +71,55 @@
   <ul class="link-list" role="directory">
               <li>
             <details open>
-              <summary>      <a href="#label-Ruby+-E9-96-8B-E7-99-BA-E7-94-A8+Dev+Container">Ruby 開発用 Dev Container</a>
+              <summary>      <a href="#label-Devcontainer+Ruby+Reference">Devcontainer Ruby Reference</a>
 </summary>
               <ul class="link-list" role="directory">
-                          <li>      <a href="#label-E7-89-B9-E5-BE-B4">特徴</a>
+                          <li>      <a href="#label-E7-9B-AE-E6-AC-A1"><strong>目次</strong></a>
           <li>
             <details open>
-              <summary>      <a href="#label-E5-A7-8B-E3-82-81-E6-96-B9">始め方</a>
+              <summary>      <a href="#label-E3-82-BB-E3-83-83-E3-83-88-E3-82-A2-E3-83-83-E3-83-97"><strong>セットアップ</strong></a>
 </summary>
               <ul class="link-list" role="directory">
-                          <li>      <a href="#label-1.+-E3-83-AA-E3-83-9D-E3-82-B8-E3-83-88-E3-83-AA-E3-81-AE-E3-82-AF-E3-83-AD-E3-83-BC-E3-83-B3">1. <strong>リポジトリのクローン</strong></a>
-          <li>      <a href="#label-2.+VS+Code+-E3-81-A7-E9-96-8B-E3-81-8F">2. <strong>VS Code で開く</strong></a>
-          <li>      <a href="#label-3.+-E3-82-A2-E3-83-97-E3-83-AA-E3-82-B1-E3-83-BC-E3-82-B7-E3-83-A7-E3-83-B3-E3-81-AE-E5-AE-9F-E8-A1-8C">3. <strong>アプリケーションの実行</strong></a>
+                          <li>      <a href="#label-E5-BF-85-E8-A6-81-E3-81-AA-E3-83-84-E3-83-BC-E3-83-AB"><strong>必要なツール</strong></a>
+          <li>      <a href="#label-E7-92-B0-E5-A2-83-E6-A7-8B-E7-AF-89"><strong>環境構築</strong></a>
 
               </ul>
             </details>
           </li>
-          <li>      <a href="#label-E3-82-AB-E3-82-B9-E3-82-BF-E3-83-9E-E3-82-A4-E3-82-BA">カスタマイズ</a>
-          <li>      <a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">ライセンス</a>
+          <li>
+            <details open>
+              <summary>      <a href="#label-Rspec+-E3-81-AE-E4-BD-BF-E3-81-84-E6-96-B9"><strong>Rspec の使い方</strong></a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C"><strong>テストの実行</strong></a>
+
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details open>
+              <summary>      <a href="#label-RDoc+-E3-81-AE-E7-94-9F-E6-88-90"><strong>RDoc の生成</strong></a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-E6-89-8B-E9-A0-86"><strong>手順</strong></a>
+
+              </ul>
+            </details>
+          </li>
+          <li>      <a href="#label-Reference+-E4-B8-80-E8-A6-A7"><strong>Reference 一覧</strong></a>
+          <li>
+            <details open>
+              <summary>      <a href="#label-RuboCop+-E3-81-AE-E5-88-A9-E7-94-A8-E6-96-B9-E6-B3-95"><strong>RuboCop の利用方法</strong></a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-E3-82-B3-E3-83-BC-E3-83-89-E3-82-B9-E3-82-BF-E3-82-A4-E3-83-AB-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF"><strong>コードスタイルチェック</strong></a>
+          <li>      <a href="#label-E8-87-AA-E5-8B-95-E4-BF-AE-E6-AD-A3"><strong>自動修正</strong></a>
+          <li>      <a href="#label-E7-89-B9-E5-AE-9A-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-82-92-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF"><strong>特定ファイルをチェック</strong></a>
+
+              </ul>
+            </details>
+          </li>
+          <li>      <a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9"><strong>ライセンス</strong></a>
 
               </ul>
             </details>
@@ -121,58 +152,165 @@
 
 <main role="main" aria-label="Page README.md">
 
-<h1 id="label-Ruby+-E9-96-8B-E7-99-BA-E7-94-A8+Dev+Container">Ruby 開発用 Dev Container<span><a href="#label-Ruby+-E9-96-8B-E7-99-BA-E7-94-A8+Dev+Container">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<h1 id="label-Devcontainer+Ruby+Reference">Devcontainer Ruby <a href="Reference.html"><code>Reference</code></a><span><a href="#label-Devcontainer+Ruby+Reference">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<p>このリポジトリは、Visual Studio Code の Dev Containers 機能を利用した Ruby 開発環境を提供します。事前に設定された環境を使用することで、効率的に Ruby の開発を進めることができます。</p>
+<p>このリポジトリは、Ruby の開発環境を提供し、基本構文から制御構文、クラスの書き方、関数型プログラミングまで幅広い学習をサポートします。RuboCop によるコードスタイルチェックや Rspec を用いたテスト駆動開発を簡単に実行できる設定が含まれています。</p>
 <hr>
 
-<h2 id="label-E7-89-B9-E5-BE-B4">特徴<span><a href="#label-E7-89-B9-E5-BE-B4">&para;</a> <a href="#top">&uarr;</a></span></h2>
-<ul><li>
-<p><strong>Ruby 環境</strong>: 指定されたバージョンの Ruby 開発環境を簡単に構築。</p>
+<h2 id="label-E7-9B-AE-E6-AC-A1"><strong>目次</strong><span><a href="#label-E7-9B-AE-E6-AC-A1">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ol><li>
+<p><a href="#セットアップ">セットアップ</a></p>
 </li><li>
-<p><strong>VS Code との統合</strong>: Visual Studio Code の Dev Containers 機能に最適化され、シームレスな開発体験を提供。</p>
+<p><a href="#rspec-の使い方">Rspec の使い方</a></p>
 </li><li>
-<p><strong>依存関係管理</strong>: Bundler を使用して Gem の依存関係を簡単に管理。</p>
-</li></ul>
+<p><a href="#rdoc-の生成">RDoc の生成</a></p>
+</li><li>
+<p><a href="#reference-一覧">Reference 一覧</a></p>
+</li><li>
+<p><a href="#rubocop-の利用方法">RuboCop の利用方法</a></p>
+</li></ol>
 <hr>
 
-<h2 id="label-E5-A7-8B-E3-82-81-E6-96-B9">始め方<span><a href="#label-E5-A7-8B-E3-82-81-E6-96-B9">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2 id="label-E3-82-BB-E3-83-83-E3-83-88-E3-82-A2-E3-83-83-E3-83-97"><strong>セットアップ</strong><span><a href="#label-E3-82-BB-E3-83-83-E3-83-88-E3-82-A2-E3-83-83-E3-83-97">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<h3 id="label-1.+-E3-83-AA-E3-83-9D-E3-82-B8-E3-83-88-E3-83-AA-E3-81-AE-E3-82-AF-E3-83-AD-E3-83-BC-E3-83-B3">1. <strong>リポジトリのクローン</strong><span><a href="#label-1.+-E3-83-AA-E3-83-9D-E3-82-B8-E3-83-88-E3-83-AA-E3-81-AE-E3-82-AF-E3-83-AD-E3-83-BC-E3-83-B3">&para;</a> <a href="#top">&uarr;</a></span></h3>
-
-<p>ターミナルで以下のコマンドを実行してください:</p>
-
-<pre>git clone https://github.com/tomohiroJin/devcontainer-ruby.git
-cd devcontainer-ruby</pre>
-
-<h3 id="label-2.+VS+Code+-E3-81-A7-E9-96-8B-E3-81-8F">2. <strong>VS Code で開く</strong><span><a href="#label-2.+VS+Code+-E3-81-A7-E9-96-8B-E3-81-8F">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<h3 id="label-E5-BF-85-E8-A6-81-E3-81-AA-E3-83-84-E3-83-BC-E3-83-AB"><strong>必要なツール</strong><span><a href="#label-E5-BF-85-E8-A6-81-E3-81-AA-E3-83-84-E3-83-BC-E3-83-AB">&para;</a> <a href="#top">&uarr;</a></span></h3>
 <ul><li>
-<p>最新版の <a href="https://code.visualstudio.com/">Visual Studio Code</a> をインストールしてください。</p>
+<p>Docker</p>
 </li><li>
-<p><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers 拡張機能</a>をインストールしてください。</p>
+<p>Visual Studio Code</p>
 </li><li>
-<p>このリポジトリを VS Code で開き、<code>Dev Container</code> の再読み込みを求められたら承認します。</p>
+<p>Dev Containers 拡張機能</p>
 </li></ul>
 
-<h3 id="label-3.+-E3-82-A2-E3-83-97-E3-83-AA-E3-82-B1-E3-83-BC-E3-82-B7-E3-83-A7-E3-83-B3-E3-81-AE-E5-AE-9F-E8-A1-8C">3. <strong>アプリケーションの実行</strong><span><a href="#label-3.+-E3-82-A2-E3-83-97-E3-83-AA-E3-82-B1-E3-83-BC-E3-82-B7-E3-83-A7-E3-83-B3-E3-81-AE-E5-AE-9F-E8-A1-8C">&para;</a> <a href="#top">&uarr;</a></span></h3>
-<ul><li>
-<p>アプリケーションの実行や Rake タスクの実行が可能です。</p>
+<h3 id="label-E7-92-B0-E5-A2-83-E6-A7-8B-E7-AF-89"><strong>環境構築</strong><span><a href="#label-E7-92-B0-E5-A2-83-E6-A7-8B-E7-AF-89">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ol><li>
+<p>リポジトリをクローンします。</p>
+</li></ol>
+
+<p><code>bash   git clone https://github.com/tomohiroJin/devcontainer-ruby.git   cd devcontainer-ruby </code></p>
+<ol><li>
+<p>VS Code でプロジェクトを開きます。</p>
 </li><li>
-<p>必要に応じてコンテナ内でスクリプトを実行してください。</p>
-</li></ul>
+<p><code>Dev Containers</code> 拡張機能を使ってコンテナ内で開発環境を起動します。</p>
+</li></ol>
 <hr>
 
-<h2 id="label-E3-82-AB-E3-82-B9-E3-82-BF-E3-83-9E-E3-82-A4-E3-82-BA">カスタマイズ<span><a href="#label-E3-82-AB-E3-82-B9-E3-82-BF-E3-83-9E-E3-82-A4-E3-82-BA">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2 id="label-Rspec+-E3-81-AE-E4-BD-BF-E3-81-84-E6-96-B9"><strong>Rspec の使い方</strong><span><a href="#label-Rspec+-E3-81-AE-E4-BD-BF-E3-81-84-E6-96-B9">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p><code>.devcontainer/devcontainer.json</code> を編集することで、開発環境を自由にカスタマイズできます。例えば、Ruby のバージョンを変更する場合は、<code>Dockerfile</code> 内の <code>VARIANT</code> 引数を変更してください。</p>
+<p>このプロジェクトでは Rspec を使用してテストを実行します。</p>
+
+<h3 id="label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C"><strong>テストの実行</strong><span><a href="#label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ol><li>
+<p>全テストを実行:</p>
+</li></ol>
+
+<p><code>bash   rspec </code></p>
+<ol><li>
+<p>特定のテストファイルを実行:</p>
+</li></ol>
+
+<p><code>bash   rspec spec/reference/loops_spec.rb </code></p>
+<ol><li>
+<p>特定の行番号のテストを実行:</p>
+</li></ol>
+
+<p><code>bash   rspec spec/reference/loops_spec.rb:10 </code></p>
+<ol><li>
+<p>テスト結果を詳細に表示:</p>
+</li></ol>
+
+<p><code>bash   rspec --format documentation </code></p>
 <hr>
 
-<h2 id="label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">ライセンス<span><a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2 id="label-RDoc+-E3-81-AE-E7-94-9F-E6-88-90"><strong>RDoc の生成</strong><span><a href="#label-RDoc+-E3-81-AE-E7-94-9F-E6-88-90">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>このプロジェクトは MIT ライセンスの下で提供されています。詳細については <a href="LICENSE">LICENSE</a> ファイルをご覧ください。</p>
+<p>RDoc を使用して、このプロジェクトのコードベースから HTML ドキュメントを生成します。</p>
+
+<h3 id="label-E6-89-8B-E9-A0-86"><strong>手順</strong><span><a href="#label-E6-89-8B-E9-A0-86">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ol><li>
+<p>RDoc のセットアップ: <a href="Gemfile.html">Gemfile</a> に以下を追加済みです。</p>
+</li></ol>
+
+<p><code>ruby   gem &#39;rdoc&#39; </code></p>
+
+<p>必要に応じて以下を実行してください。</p>
+
+<p><code>bash   bundle install </code></p>
+<ol><li>
+<p>ドキュメントの生成:</p>
+</li></ol>
+
+<p><code>bash   bundle exec rdoc </code></p>
+<ol><li>
+<p>生成されたドキュメントの確認: <code>doc/index.html</code> をブラウザで開いてください。</p>
+</li></ol>
 <hr>
 
-<p>このリポジトリを活用することで、VS Code と Docker による再現性・移植性の高い Ruby 開発環境を手軽に構築できます。是非活用してみてください。</p>
+<h2 id="label-Reference+-E4-B8-80-E8-A6-A7"><strong>Reference 一覧</strong><span><a href="#label-Reference+-E4-B8-80-E8-A6-A7">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>以下は、このリポジトリで提供している Ruby の学習リファレンスの一覧です。詳細はリンク先の RDoc を参照してください。</p>
+
+<table role="table">
+<thead>
+<tr>
+<th>機能</th>
+<th>概要</th>
+<th>詳細</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本構文</td>
+<td>変数、配列、ハッシュの基本操作を学ぶ</td>
+<td>[詳細](doc/Reference/basic/BasicsSyntax.html)</td>
+</tr>
+<tr>
+<td>制御構文</td>
+<td>if-else、case 文、三項演算子の使い方</td>
+<td>[詳細](doc/Reference/basic/ControlFlow.html)</td>
+</tr>
+<tr>
+<td>ループ文</td>
+<td>while、until、each、times の使い方</td>
+<td>[詳細](doc/Reference/basic/Loops.html)</td>
+</tr>
+<tr>
+<td>クラスの書き方</td>
+<td>継承、抽象化、ポリモーフィズムの例</td>
+<td>[詳細](doc/Reference/basic/Shape.html)</td>
+</tr>
+<tr>
+<td>関数型</td>
+<td>高階関数、ラムダ、イミュータブルデータ操作の例</td>
+<td>[詳細](doc/Reference/basic/Functional.html)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h2 id="label-RuboCop+-E3-81-AE-E5-88-A9-E7-94-A8-E6-96-B9-E6-B3-95"><strong>RuboCop の利用方法</strong><span><a href="#label-RuboCop+-E3-81-AE-E5-88-A9-E7-94-A8-E6-96-B9-E6-B3-95">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>このプロジェクトでは RuboCop を使用してコードの品質を保ちます。</p>
+
+<h3 id="label-E3-82-B3-E3-83-BC-E3-83-89-E3-82-B9-E3-82-BF-E3-82-A4-E3-83-AB-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF"><strong>コードスタイルチェック</strong><span><a href="#label-E3-82-B3-E3-83-BC-E3-83-89-E3-82-B9-E3-82-BF-E3-82-A4-E3-83-AB-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">rubocop</span>
+</pre>
+
+<h3 id="label-E8-87-AA-E5-8B-95-E4-BF-AE-E6-AD-A3"><strong>自動修正</strong><span><a href="#label-E8-87-AA-E5-8B-95-E4-BF-AE-E6-AD-A3">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">rubocop</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-identifier">auto</span><span class="ruby-operator">-</span><span class="ruby-identifier">correct</span>
+</pre>
+
+<h3 id="label-E7-89-B9-E5-AE-9A-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-82-92-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF"><strong>特定ファイルをチェック</strong><span><a href="#label-E7-89-B9-E5-AE-9A-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-82-92-E3-83-81-E3-82-A7-E3-83-83-E3-82-AF">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">rubocop</span> <span class="ruby-identifier">path</span><span class="ruby-operator">/</span><span class="ruby-identifier">to</span><span class="ruby-operator">/</span><span class="ruby-identifier">file</span>.<span class="ruby-identifier">rb</span>
+</pre>
+<hr>
+
+<h2 id="label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9"><strong>ライセンス</strong><span><a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>このリポジトリは MIT ライセンスの下で提供されています。</p>
 
 </main>
 

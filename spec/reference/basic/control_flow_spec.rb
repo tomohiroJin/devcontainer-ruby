@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'reference/control_flow'
+require 'reference/basic/control_flow'
 
 RSpec.describe Reference::ControlFlow do
   let(:control_flow) { Reference::ControlFlow.new }
