@@ -9,7 +9,7 @@
 
   <meta name="keywords" content="ruby,class,Reference::Functional">
 
-    <meta name="description" content="Documentation for the Reference::Functional class">
+    <meta name="description" content="class Reference::Functional: 関数型プログラミング要素を学ぶためのクラス">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../";
@@ -103,6 +103,8 @@
 
   <section class="description">
     
+<p>関数型プログラミング要素を学ぶためのクラス</p>
+
   </section>
 
   <section id="5Buntitled-5D" class="documentation-section anchor-link">
@@ -134,7 +136,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="apply_function-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 29</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">apply_function</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">func</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">func</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">element</span>) }
 <span class="ruby-keyword">end</span></pre>
@@ -172,7 +174,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="double_lambda-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 40</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">double_lambda</span>
   <span class="ruby-operator">-&gt;</span>(<span class="ruby-identifier">x</span>) { <span class="ruby-identifier">x</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span> }
 <span class="ruby-keyword">end</span></pre>
@@ -209,7 +211,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="immutable_array-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 52</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">immutable_array</span>(<span class="ruby-identifier">array</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">freeze</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> }
 <span class="ruby-keyword">end</span></pre>
@@ -233,7 +235,7 @@
             <div class="method-heading">
               <a href="#method-i-pure_addition" title="Link to this method">
                 <span class="method-name">pure_addition</span>
-                <span class="method-args">(a, b)</span>
+                <span class="method-args">(first_number, second_number)</span>
               </a>
             </div>
         </div>
@@ -246,14 +248,14 @@
 
         <div class="method-description">
           <div class="method-source-code" id="pure_addition-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 77</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">pure_addition</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
-  <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">pure_addition</span>(<span class="ruby-identifier">first_number</span>, <span class="ruby-identifier">second_number</span>)
+  <span class="ruby-identifier">first_number</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">second_number</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           <p>ピュア関数の例: 副作用がない単純な関数</p>
 
-<p>@param a [Integer] 足される数@param b [Integer] 足す数@return [Integer] 加算結果</p>
+<p>@param first_number [Integer] 足される数@param second_number [Integer] 足す数@return [Integer] 加算結果</p>
 
 <p>使用例:</p>
 
@@ -283,9 +285,9 @@
 
         <div class="method-description">
           <div class="method-source-code" id="sum_array-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 64</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sum_array</span>(<span class="ruby-identifier">array</span>)
-  <span class="ruby-identifier">array</span>.<span class="ruby-identifier">reduce</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span> }
+  <span class="ruby-identifier">array</span>.<span class="ruby-identifier">sum</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           <p>Enumerable を利用した高階関数の活用</p>

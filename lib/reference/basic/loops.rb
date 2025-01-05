@@ -27,7 +27,7 @@ module Reference
     #   puts loops.while_loop(5) # => [5, 4, 3, 2, 1]
     def while_loop(count)
       result = []
-      while count > 0
+      while count.positive?
         result << count
         count -= 1
       end
@@ -61,11 +61,9 @@ module Reference
     #   loops = Reference::Loops.new
     #   puts loops.each_loop([1, 2, 3]) # => [2, 4, 6]
     def each_loop(array)
-      result = []
-      array.each do |item|
-        result << item * 2
+      array.map do |item|
+        (item * 2)
       end
-      result
     end
 
     # times メソッド: 指定回数だけメッセージを生成します。

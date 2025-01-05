@@ -14,7 +14,8 @@ RSpec.describe Reference::Patterns::Subject do
 
       expect do
         subject.state = 'Test State'
-      end.to output("Observer 1: State has been updated to 'Test State'\nObserver 2: State has been updated to 'Test State'\n").to_stdout
+      end.to output("Observer 1: State has been updated to 'Test State'\n" \
+                    "Observer 2: State has been updated to 'Test State'\n").to_stdout
     end
 
     it '観察者を削除して通知を送らない' do

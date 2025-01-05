@@ -1,67 +1,86 @@
 require:
   - rubocop-performance
 
-# RuboCop 基本設定ファイル
-
-# レイアウトに関連するルール
-Layout/LineLength:
-  Max: 120 # 1行の最大文字数を 120 に設定（デフォルトは80）
-
-Layout/EndOfLine:
-  EnforcedStyle: lf # 改行コードを LF に統一
-
-# メトリクス（複雑さやブロック長）関連ルール
-Metrics/BlockLength:
-  Max: 50 # ブロック長の最大を 50 行に設定
+# 全体設定
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
   Exclude:
-    - 'spec/**/*' # テストファイルでは無視
+    - 'db/schema.rb'        # Rails の自動生成ファイル
+    - 'bin/**/*'            # bin ディレクトリ
+    - 'node_modules/**/*'   # Node.js の依存ファイル
+
+# Layout（レイアウト関連）
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: false # デファクトスタンダード外のため無効化
+
+# Lint（潜在的なバグや非推奨コードの警告）
+Lint/AmbiguousOperatorPrecedence:
+  Enabled: true
+Lint/AmbiguousRange:
+  Enabled: true
+Lint/ConstantOverwrittenInRescue:
+  Enabled: true
+Lint/DuplicateBranch:
+  Enabled: true
+Lint/DuplicateMatchPattern:
+  Enabled: true
+Lint/DuplicateSetElement:
+  Enabled: true
+Lint/EmptyBlock:
+  Enabled: false # デファクトでは許容されることが多いため無効化
+Lint/EmptyClass:
+  Enabled: false # 無効化（用途によって許容されるため）
+Lint/ItWithoutArgumentsInBlock:
+  Enabled: false # テストでは短い形式を好む場合が多い
+
+# Metrics（コードの複雑性や長さに関するルール）
+Metrics/BlockLength:
+  Max: 50 # ブロックの長さを緩和
+  Exclude:
+    - 'spec/**/*' # テストコードは除外
 
 Metrics/MethodLength:
-  Enabled: false # メソッドの長さ制限を無効化
+  Max: 20 # メソッドの長さを緩和
+  Enabled: true
 
 Metrics/ClassLength:
-  Enabled: false # クラスの長さ制限を無効化
+  Max: 300 # クラスの長さを緩和
+  Enabled: true
+
+Metrics/ModuleLength:
+  Max: 400 # モジュールの長さを緩和
+  Enabled: true
 
 Metrics/AbcSize:
-  Enabled: false # メソッドの ABC サイズ制限を無効化
+  Enabled: false # ABC サイズの制限を無効化
 
-# スタイル（スタイルチェックのルール）
-Style/Documentation:
-  Enabled: false # トップレベルのドキュメントコメントを無効化
+# Naming（命名規則）
+Naming/BlockForwarding:
+  Enabled: true
 
-Style/FrozenStringLiteralComment:
-  Enabled: true # `# frozen_string_literal: true` のコメントは有効
+# Security（セキュリティ関連）
+Security/CompoundHash:
+  Enabled: true
+Security/IoMethods:
+  Enabled: true
 
-Style/StringLiterals:
-  EnforcedStyle: single_quotes # 文字列リテラルはシングルクオートを推奨
+# Style（コードスタイル）
+Style/ArgumentsForwarding:
+  Enabled: true
+Style/DataInheritance:
+  Enabled: true
+Style/FileRead:
+  Enabled: true
+Style/MagicCommentFormat:
+  Enabled: true
+Style/StringChars:
+  Enabled: true
 
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: consistent_comma # 配列の末尾カンマを統一
-
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: consistent_comma # ハッシュの末尾カンマを統一
-
-# Lint（明確なバグの可能性を指摘）
-Lint/AmbiguousBlockAssociation:
-  Enabled: true # 曖昧なブロックの関連付けを警告
-
-Lint/UselessAssignment:
-  Enabled: true # 使用されていない変数代入を警告
-
-Lint/UnusedMethodArgument:
-  Enabled: true # 未使用のメソッド引数を警告
-
-# Performance（パフォーマンス関連のルール）
-Performance/RedundantMerge:
-  Enabled: true # 冗長なマージ操作を警告
-
-Performance/Detect:
-  Enabled: true # 冗長な検出処理を警告
-
-# プロジェクト固有の除外
-AllCops:
-  TargetRubyVersion: 3.0 # プロジェクトで使用する Ruby のバージョン
-  Exclude:
-    - 'db/schema.rb' # Rails の自動生成ファイルを除外
-    - 'bin/**/*'     # bin ディレクトリを除外
-    - 'node_modules/**/*' # node_modules を除外
+# Performance（パフォーマンス関連）
+Performance/AncestorsInclude:
+  Enabled: true
+Performance/BigDecimalWithNumericArgument:
+  Enabled: true
+Performance/RedundantEqualityComparisonBlock:
+  Enabled: true

@@ -8,7 +8,7 @@
 <title>README - RDoc Documentation</title>
 
   <meta name="keywords" content="ruby,documentation,README">
-  <meta name="description" content="README: Strategy. Observer.">
+  <meta name="description" content="README: Ruby を使った 5 種類の基本的なデザインパターンの実装例を提供しています。各デザインパターンの概要、使用例、および詳細な RDoc ドキュメントへのリンクを以下に示します。 --- ## **デザインパターン一覧** | パターン名 | 概要 ">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../";
@@ -89,17 +89,6 @@
               </ul>
             </details>
           </li>
-          <li>
-            <details open>
-              <summary>      <a href="#label-E8-A9-B3-E7-B4-B0-E3-81-AA-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88"><strong>詳細なドキュメント</strong></a>
-</summary>
-              <ul class="link-list" role="directory">
-                          <li>      <a href="#label-RDoc+-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88-E3-81-AE-E7-94-9F-E6-88-90-E6-96-B9-E6-B3-95"><strong>RDoc ドキュメントの生成方法</strong></a>
-
-              </ul>
-            </details>
-          </li>
-          <li>      <a href="#label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C-E6-96-B9-E6-B3-95"><strong>テストの実行方法</strong></a>
 
               </ul>
             </details>
@@ -146,7 +135,6 @@
 <th>パターン名</th>
 <th>概要</th>
 <th>使用例</th>
-<th>詳細</th>
 </tr>
 </thead>
 <tbody>
@@ -154,31 +142,26 @@
 <td>Strategy パターン</td>
 <td>アルゴリズムを動的に切り替えるデザインパターン。</td>
 <td>認証ロジック、支払い処理の切り替え</td>
-<td>[詳細](doc/Reference/Patterns/Strategy.html)</td>
 </tr>
 <tr>
 <td>Observer パターン</td>
 <td>オブジェクト間の依存関係を管理し、状態変更時に通知を送る。</td>
 <td>イベント通知、リアルタイム監視</td>
-<td>[詳細](doc/Reference/Patterns/Observer.html)</td>
 </tr>
 <tr>
 <td>Decorator パターン</td>
 <td>オブジェクトに動的に振る舞いを追加するデザインパターン。</td>
 <td>メッセージの装飾、動的な属性の追加</td>
-<td>[詳細](doc/Reference/Patterns/Decorator.html)</td>
 </tr>
 <tr>
 <td>Factory パターン</td>
 <td>オブジェクト生成のロジックをカプセル化するデザインパターン。</td>
 <td>API クライアント、通知オブジェクトの生成</td>
-<td>[詳細](doc/Reference/Patterns/Factory.html)</td>
 </tr>
 <tr>
 <td>Template Method パターン</td>
 <td>アルゴリズムの骨格を定義し、具体的な処理をサブクラスに委譲するデザインパターン。</td>
 <td>データ処理の共通化、バッチ処理</td>
-<td>[詳細](doc/Reference/Patterns/TemplateMethod.html)</td>
 </tr>
 </tbody>
 </table>
@@ -249,28 +232,6 @@
 <span class="ruby-identifier">processor</span> = <span class="ruby-constant">Reference</span><span class="ruby-operator">::</span><span class="ruby-constant">Patterns</span><span class="ruby-operator">::</span><span class="ruby-constant">JSONProcessor</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">process</span>([<span class="ruby-string">&#39;Name, Age&#39;</span>, <span class="ruby-string">&#39;Alice, 30&#39;</span>, <span class="ruby-string">&#39;Bob, 25&#39;</span>]) <span class="ruby-comment"># JSON processing completed</span>
 </pre>
-<hr>
-
-<h2 id="label-E8-A9-B3-E7-B4-B0-E3-81-AA-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88"><strong>詳細なドキュメント</strong><span><a href="#label-E8-A9-B3-E7-B4-B0-E3-81-AA-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<p>各デザインパターンの詳細な解説は RDoc ドキュメントに記載されています。以下の手順で生成および確認できます。</p>
-
-<h3 id="label-RDoc+-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88-E3-81-AE-E7-94-9F-E6-88-90-E6-96-B9-E6-B3-95"><strong>RDoc ドキュメントの生成方法</strong><span><a href="#label-RDoc+-E3-83-89-E3-82-AD-E3-83-A5-E3-83-A1-E3-83-B3-E3-83-88-E3-81-AE-E7-94-9F-E6-88-90-E6-96-B9-E6-B3-95">&para;</a> <a href="#top">&uarr;</a></span></h3>
-<ol><li>
-<p>以下のコマンドで RDoc を生成します。 <code>bash   bundle exec rdoc </code></p>
-</li><li>
-<p><code>doc/</code> ディレクトリ内の <code>index.html</code> をブラウザで開きます。</p>
-</li></ol>
-<hr>
-
-<h2 id="label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C-E6-96-B9-E6-B3-95"><strong>テストの実行方法</strong><span><a href="#label-E3-83-86-E3-82-B9-E3-83-88-E3-81-AE-E5-AE-9F-E8-A1-8C-E6-96-B9-E6-B3-95">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<p>追加されたデザインパターンのテストは、以下のコマンドで実行できます。</p>
-
-<pre class="ruby"><span class="ruby-identifier">rspec</span> <span class="ruby-identifier">spec</span><span class="ruby-operator">/</span><span class="ruby-identifier">reference</span><span class="ruby-operator">/</span><span class="ruby-identifier">patterns</span>
-</pre>
-
-<p>すべてのテストが成功すれば、正しく実装されていることが確認できます。</p>
 
 </main>
 

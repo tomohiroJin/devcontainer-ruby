@@ -15,6 +15,7 @@
 #   puts result # => 3
 #
 module Reference
+  # 関数型プログラミング要素を学ぶためのクラス
   class Functional
     # 高階関数: 関数を引数として受け取る
     #
@@ -62,20 +63,20 @@ module Reference
     #   functional.sum_array([1, 2, 3])
     #   # => 6
     def sum_array(array)
-      array.reduce(0) { |sum, x| sum + x }
+      array.sum
     end
 
     # ピュア関数の例: 副作用がない単純な関数
     #
-    # @param a [Integer] 足される数
-    # @param b [Integer] 足す数
+    # @param first_number [Integer] 足される数
+    # @param second_number [Integer] 足す数
     # @return [Integer] 加算結果
     #
     # 使用例:
     #   functional.pure_addition(3, 4)
     #   # => 7
-    def pure_addition(a, b)
-      a + b
+    def pure_addition(first_number, second_number)
+      first_number + second_number
     end
   end
 end
