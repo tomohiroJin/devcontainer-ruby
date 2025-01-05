@@ -68,7 +68,7 @@ module Reference
     #
     # @return [Float] 円の面積
     def area
-      Math::PI * @radius**2
+      Math::PI * (@radius**2)
     end
 
     # 図形の説明を返す (オーバーライド)
