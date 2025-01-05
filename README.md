@@ -104,11 +104,11 @@ RDoc を使用して、このプロジェクトのコードベースから HTML 
 
 | 機能          | 概要                                       | 詳細 |
 |---------------|------------------------------------------|------|
-| 基本構文       | 変数、配列、ハッシュの基本操作を学ぶ         | [詳細](doc/Reference/basic/BasicsSyntax.html) |
-| 制御構文       | if-else、case 文、三項演算子の使い方         | [詳細](doc/Reference/basic/ControlFlow.html) |
-| ループ文       | while、until、each、times の使い方          | [詳細](doc/Reference/basic/Loops.html) |
-| クラスの書き方  | 継承、抽象化、ポリモーフィズムの例           | [詳細](doc/Reference/basic/Shape.html) |
-| 関数型         | 高階関数、ラムダ、イミュータブルデータ操作の例 | [詳細](doc/Reference/basic/Functional.html) |
+| 基本構文       | 変数、配列、ハッシュの基本操作を学ぶ         | [詳細](doc/Reference/BasicsSyntax.html) |
+| 制御構文       | if-else、case 文、三項演算子の使い方         | [詳細](doc/Reference/ControlFlow.html) |
+| ループ文       | while、until、each、times の使い方          | [詳細](doc/Reference/Loops.html) |
+| クラスの書き方  | 継承、抽象化、ポリモーフィズムの例           | [詳細](doc/Reference/Shape.html) |
+| 関数型         | 高階関数、ラムダ、イミュータブルデータ操作の例 | [詳細](doc/Reference/Functional.html) |
 
 ---
 
