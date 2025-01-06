@@ -5,25 +5,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>class Reference::Circle - RDoc Documentation</title>
+<title>class Reference::Basic::Circle - RDoc Documentation</title>
 
-  <meta name="keywords" content="ruby,class,Reference::Circle">
+  <meta name="keywords" content="ruby,class,Reference::Basic::Circle">
 
-    <meta name="description" content="class Reference::Circle: Circle.">
+    <meta name="description" content="class Reference::Basic::Circle: Circle.">
 
 <script type="text/javascript">
-  var rdoc_rel_prefix = "../";
-  var index_rel_prefix = "../";
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
 </script>
 
-<script src="../js/navigation.js" defer></script>
-<script src="../js/search.js" defer></script>
-<script src="../js/search_index.js" defer></script>
-<script src="../js/searcher.js" defer></script>
-<script src="../js/darkfish.js" defer></script>
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
 
-<link href="../css/fonts.css" rel="stylesheet">
-<link href="../css/rdoc.css" rel="stylesheet">
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
 
 
 <body id="top" role="document" class="class">
@@ -36,13 +36,13 @@
   <div id="project-navigation">
     <div id="home-section" role="region" title="Quick navigation" class="nav-section">
   <h2>
-    <a href="../index.html" rel="home">Home</a>
+    <a href="../../index.html" rel="home">Home</a>
   </h2>
 
   <div id="table-of-contents-navigation">
-    <a href="../table_of_contents.html#pages">Pages</a>
-    <a href="../table_of_contents.html#classes">Classes</a>
-    <a href="../table_of_contents.html#methods">Methods</a>
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
   </div>
 </div>
 
@@ -67,7 +67,7 @@
   
   <div id="parent-class-section" class="nav-section">
   <h3>Ancestors</h3>
-  <ul><li><a href="Shape.html">Reference::Shape</a><ul><li>Object</li></ul></li></ul>
+  <ul><li><a href="Shape.html">Reference::Basic::Shape</a><ul><li>Object</li></ul></li></ul>
 </div>
 
   
@@ -100,9 +100,9 @@
 
 </nav>
 
-<main role="main" aria-labelledby="class-Reference::Circle">
-  <h1 id="class-Reference::Circle" class="anchor-link class">
-    class Reference::Circle
+<main role="main" aria-labelledby="class-Reference::Basic::Circle">
+  <h1 id="class-Reference::Basic::Circle" class="anchor-link class">
+    class Reference::Basic::Circle
   </h1>
 
   <section class="description">
@@ -147,7 +147,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 62</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 64</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">radius</span>)
   <span class="ruby-keyword">super</span>(<span class="ruby-string">&#39;Circle&#39;</span>)
   <span class="ruby-ivar">@radius</span> = <span class="ruby-identifier">radius</span>
@@ -158,7 +158,7 @@
 <p>@param radius [Numeric] 半径</p>
             <div class="method-calls-super">
               Calls superclass method
-              <a href="Shape.html#method-c-new"><code>Reference::Shape::new</code></a>
+              <a href="Shape.html#method-c-new"><code>Reference::Basic::Shape::new</code></a>
             </div>
         </div>
 
@@ -190,7 +190,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="area-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 70</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">area</span>
   <span class="ruby-constant">Math</span><span class="ruby-operator">::</span><span class="ruby-constant">PI</span> <span class="ruby-operator">*</span> (<span class="ruby-ivar">@radius</span><span class="ruby-operator">**</span><span class="ruby-value">2</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -221,7 +221,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="description-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 77</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/class_usage.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">description</span>
   <span class="ruby-node">&quot;Circle with radius #{@radius}&quot;</span>
 <span class="ruby-keyword">end</span></pre>

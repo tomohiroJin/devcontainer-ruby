@@ -2,19 +2,19 @@
 
 require 'reference/basic/class_usage'
 
-RSpec.describe Reference::Shape do
+RSpec.describe Reference::Basic::Shape do
   describe '抽象クラスの動作' do
     it 'Shape クラスのインスタンス化はできない' do
-      expect { Reference::Shape.new('Shape') }.to raise_error(NotImplementedError)
+      expect { Reference::Basic::Shape.new('Shape') }.to raise_error(NotImplementedError)
     end
 
     it 'area メソッドはサブクラスで定義する必要がある' do
-      expect { Reference::Shape.new('Shape').area }.to raise_error(NotImplementedError)
+      expect { Reference::Basic::Shape.new('Shape').area }.to raise_error(NotImplementedError)
     end
   end
 
-  describe Reference::Circle do
-    let(:circle) { Reference::Circle.new(10) }
+  describe Reference::Basic::Circle do
+    let(:circle) { Reference::Basic::Circle.new(10) }
 
     it 'Circle の面積を計算する' do
       expect(circle.area).to be_within(0.01).of(314.16) # 面積 πr^2
@@ -25,8 +25,8 @@ RSpec.describe Reference::Shape do
     end
   end
 
-  describe Reference::Rectangle do
-    let(:rectangle) { Reference::Rectangle.new(5, 10) }
+  describe Reference::Basic::Rectangle do
+    let(:rectangle) { Reference::Basic::Rectangle.new(5, 10) }
 
     it 'Rectangle の面積を計算する' do
       expect(rectangle.area).to eq(50) # 面積 幅×高さ
@@ -37,8 +37,8 @@ RSpec.describe Reference::Shape do
     end
   end
 
-  describe Reference::OverloadDemo do
-    let(:overload_demo) { Reference::OverloadDemo.new }
+  describe Reference::Basic::OverloadDemo do
+    let(:overload_demo) { Reference::Basic::OverloadDemo.new }
 
     it '1 つの引数で正方形の面積を計算する' do
       expect(overload_demo.calculate(4)).to eq('Square area: 16')

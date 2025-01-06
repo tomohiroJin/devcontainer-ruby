@@ -2,12 +2,12 @@
 
 require 'reference/basic/basics_syntax'
 
-RSpec.describe Reference::BasicsSyntax do
-  let(:basics) { Reference::BasicsSyntax.new }
+RSpec.describe Reference::Basic::BasicsSyntax do
+  let(:basics) { Reference::Basic::BasicsSyntax.new }
 
   describe '::GREETING' do
     it '定数が正しく定義されていること' do
-      expect(Reference::BasicsSyntax::GREETING).to eq('こんにちは、Ruby!')
+      expect(Reference::Basic::BasicsSyntax::GREETING).to eq('こんにちは、Ruby!')
     end
   end
 

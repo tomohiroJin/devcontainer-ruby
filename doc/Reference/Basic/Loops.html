@@ -5,25 +5,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>class Reference::Loops - RDoc Documentation</title>
+<title>class Reference::Basic::Loops - RDoc Documentation</title>
 
-  <meta name="keywords" content="ruby,class,Reference::Loops">
+  <meta name="keywords" content="ruby,class,Reference::Basic::Loops">
 
-    <meta name="description" content="class Reference::Loops: Ruby のループ構文を学ぶためのクラス">
+    <meta name="description" content="class Reference::Basic::Loops: Ruby のループ構文を学ぶためのクラス">
 
 <script type="text/javascript">
-  var rdoc_rel_prefix = "../";
-  var index_rel_prefix = "../";
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
 </script>
 
-<script src="../js/navigation.js" defer></script>
-<script src="../js/search.js" defer></script>
-<script src="../js/search_index.js" defer></script>
-<script src="../js/searcher.js" defer></script>
-<script src="../js/darkfish.js" defer></script>
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
 
-<link href="../css/fonts.css" rel="stylesheet">
-<link href="../css/rdoc.css" rel="stylesheet">
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
 
 
 <body id="top" role="document" class="class">
@@ -36,13 +36,13 @@
   <div id="project-navigation">
     <div id="home-section" role="region" title="Quick navigation" class="nav-section">
   <h2>
-    <a href="../index.html" rel="home">Home</a>
+    <a href="../../index.html" rel="home">Home</a>
   </h2>
 
   <div id="table-of-contents-navigation">
-    <a href="../table_of_contents.html#pages">Pages</a>
-    <a href="../table_of_contents.html#classes">Classes</a>
-    <a href="../table_of_contents.html#methods">Methods</a>
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
   </div>
 </div>
 
@@ -95,9 +95,9 @@
 
 </nav>
 
-<main role="main" aria-labelledby="class-Reference::Loops">
-  <h1 id="class-Reference::Loops" class="anchor-link class">
-    class Reference::Loops
+<main role="main" aria-labelledby="class-Reference::Basic::Loops">
+  <h1 id="class-Reference::Basic::Loops" class="anchor-link class">
+    class Reference::Basic::Loops
   </h1>
 
   <section class="description">
@@ -135,7 +135,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="each_loop-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 63</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each_loop</span>(<span class="ruby-identifier">array</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
     (<span class="ruby-identifier">item</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span>)
@@ -174,7 +174,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="times_loop-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 77</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">times_loop</span>(<span class="ruby-identifier">times</span>)
   <span class="ruby-identifier">result</span> = []
   <span class="ruby-identifier">times</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
@@ -215,7 +215,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="until_loop-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 45</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">until_loop</span>(<span class="ruby-identifier">limit</span>)
   <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
   <span class="ruby-identifier">result</span> = []
@@ -258,7 +258,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="while_loop-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 28</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/loops.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">while_loop</span>(<span class="ruby-identifier">count</span>)
   <span class="ruby-identifier">result</span> = []
   <span class="ruby-keyword">while</span> <span class="ruby-identifier">count</span>.<span class="ruby-identifier">positive?</span>

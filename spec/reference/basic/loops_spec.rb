@@ -2,8 +2,8 @@
 
 require 'reference/basic/loops'
 
-RSpec.describe Reference::Loops do
-  let(:loops) { Reference::Loops.new }
+RSpec.describe Reference::Basic::Loops do
+  let(:loops) { Reference::Basic::Loops.new }
 
   describe '#while_loop' do
     it '指定した数からカウントダウンする' do
