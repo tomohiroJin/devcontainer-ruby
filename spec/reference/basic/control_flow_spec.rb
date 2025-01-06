@@ -2,8 +2,8 @@
 
 require 'reference/basic/control_flow'
 
-RSpec.describe Reference::ControlFlow do
-  let(:control_flow) { Reference::ControlFlow.new }
+RSpec.describe Reference::Basic::ControlFlow do
+  let(:control_flow) { Reference::Basic::ControlFlow.new }
 
   # if-else 文のテスト
   describe '#check_number' do

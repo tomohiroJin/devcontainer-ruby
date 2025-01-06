@@ -5,25 +5,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>class Reference::Functional - RDoc Documentation</title>
+<title>class Reference::Basic::Functional - RDoc Documentation</title>
 
-  <meta name="keywords" content="ruby,class,Reference::Functional">
+  <meta name="keywords" content="ruby,class,Reference::Basic::Functional">
 
-    <meta name="description" content="class Reference::Functional: 関数型プログラミング要素を学ぶためのクラス">
+    <meta name="description" content="class Reference::Basic::Functional: 関数型プログラミング要素を学ぶためのクラス">
 
 <script type="text/javascript">
-  var rdoc_rel_prefix = "../";
-  var index_rel_prefix = "../";
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
 </script>
 
-<script src="../js/navigation.js" defer></script>
-<script src="../js/search.js" defer></script>
-<script src="../js/search_index.js" defer></script>
-<script src="../js/searcher.js" defer></script>
-<script src="../js/darkfish.js" defer></script>
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
 
-<link href="../css/fonts.css" rel="stylesheet">
-<link href="../css/rdoc.css" rel="stylesheet">
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
 
 
 <body id="top" role="document" class="class">
@@ -36,13 +36,13 @@
   <div id="project-navigation">
     <div id="home-section" role="region" title="Quick navigation" class="nav-section">
   <h2>
-    <a href="../index.html" rel="home">Home</a>
+    <a href="../../index.html" rel="home">Home</a>
   </h2>
 
   <div id="table-of-contents-navigation">
-    <a href="../table_of_contents.html#pages">Pages</a>
-    <a href="../table_of_contents.html#classes">Classes</a>
-    <a href="../table_of_contents.html#methods">Methods</a>
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
   </div>
 </div>
 
@@ -96,9 +96,9 @@
 
 </nav>
 
-<main role="main" aria-labelledby="class-Reference::Functional">
-  <h1 id="class-Reference::Functional" class="anchor-link class">
-    class Reference::Functional
+<main role="main" aria-labelledby="class-Reference::Basic::Functional">
+  <h1 id="class-Reference::Basic::Functional" class="anchor-link class">
+    class Reference::Basic::Functional
   </h1>
 
   <section class="description">
@@ -136,7 +136,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="apply_function-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 30</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">apply_function</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">func</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">func</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">element</span>) }
 <span class="ruby-keyword">end</span></pre>
@@ -174,7 +174,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="double_lambda-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 41</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">double_lambda</span>
   <span class="ruby-operator">-&gt;</span>(<span class="ruby-identifier">x</span>) { <span class="ruby-identifier">x</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span> }
 <span class="ruby-keyword">end</span></pre>
@@ -211,7 +211,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="immutable_array-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 53</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">immutable_array</span>(<span class="ruby-identifier">array</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">freeze</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> }
 <span class="ruby-keyword">end</span></pre>
@@ -248,7 +248,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="pure_addition-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 78</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">pure_addition</span>(<span class="ruby-identifier">first_number</span>, <span class="ruby-identifier">second_number</span>)
   <span class="ruby-identifier">first_number</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">second_number</span>
 <span class="ruby-keyword">end</span></pre>
@@ -285,7 +285,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="sum_array-source">
-            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 65</span>
+            <pre><span class="ruby-comment"># File lib/reference/basic/functional.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sum_array</span>(<span class="ruby-identifier">array</span>)
   <span class="ruby-identifier">array</span>.<span class="ruby-identifier">sum</span>
 <span class="ruby-keyword">end</span></pre>

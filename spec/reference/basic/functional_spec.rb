@@ -2,8 +2,8 @@
 
 require 'reference/basic/functional'
 
-RSpec.describe Reference::Functional do
-  let(:functional) { Reference::Functional.new }
+RSpec.describe Reference::Basic::Functional do
+  let(:functional) { Reference::Basic::Functional.new }
 
   describe '#apply_function' do
     it '高階関数を適用する' do
