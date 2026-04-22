@@ -3,7 +3,7 @@
 require 'reference/basic/functional'
 
 RSpec.describe Reference::Basic::Functional do
-  let(:functional) { Reference::Basic::Functional.new }
+  let(:functional) { described_class.new }
 
   describe '#apply_function' do
     it '高階関数を適用する' do
@@ -20,10 +20,13 @@ RSpec.describe Reference::Basic::Functional do
   end
 
   describe '#immutable_array' do
-    it 'イミュータブルな配列を生成する' do
+    it '入力配列の各要素に 1 を足した新しい配列を返す' do
+      expect(functional.immutable_array([1, 2, 3])).to eq([2, 3, 4])
+    end
+
+    it '入力配列は凍結されて変更できない' do
       array = [1, 2, 3]
-      result = functional.immutable_array(array)
-      expect(result).to eq([2, 3, 4])
+      functional.immutable_array(array)
       expect { array[0] = 10 }.to raise_error(FrozenError)
     end
   end

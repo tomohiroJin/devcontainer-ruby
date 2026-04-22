@@ -1,32 +1,34 @@
 {
   "name": "Ruby Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/ruby:latest",
+  "image": "mcr.microsoft.com/devcontainers/ruby:4-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "ms-vsliveshare.vsliveshare",
-        "GrapeCity.gc-excelviewer",
-        "mhutchie.git-graph",
-        "donjayamanne.githistory",
+        "Shopify.ruby-lsp",
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
         "GitHub.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "streetsidesoftware.code-spell-checker",
         "MS-CEINTL.vscode-language-pack-ja",
         "yzhang.markdown-all-in-one",
         "shd101wyy.markdown-preview-enhanced",
         "DavidAnson.vscode-markdownlint",
-        "Shopify.ruby-lsp",
-        "castwide.solargraph",
-        "kaiwood.endwise",
         "oderwat.indent-rainbow",
         "mosapride.zenkaku",
         "aaron-bond.better-comments",
         "shardulm94.trailing-spaces",
         "GitHub.github-vscode-theme",
-        "misogi.ruby-rubocop",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "ms-vsliveshare.vsliveshare",
+        "GrapeCity.gc-excelviewer"
       ]
     }
   },
-  "postCreateCommand": "bundle install",
-  "remoteUser": "root"
+  "postCreateCommand": "bundle config set --local path 'vendor/bundle' && bundle install",
+  "remoteUser": "vscode"
 }

@@ -5,16 +5,16 @@ require 'reference/basic/class_usage'
 RSpec.describe Reference::Basic::Shape do
   describe '抽象クラスの動作' do
     it 'Shape クラスのインスタンス化はできない' do
-      expect { Reference::Basic::Shape.new('Shape') }.to raise_error(NotImplementedError)
+      expect { described_class.new('Shape') }.to raise_error(NotImplementedError)
     end
 
     it 'area メソッドはサブクラスで定義する必要がある' do
-      expect { Reference::Basic::Shape.new('Shape').area }.to raise_error(NotImplementedError)
+      expect { described_class.new('Shape').area }.to raise_error(NotImplementedError)
     end
   end
 
   describe Reference::Basic::Circle do
-    let(:circle) { Reference::Basic::Circle.new(10) }
+    let(:circle) { described_class.new(10) }
 
     it 'Circle の面積を計算する' do
       expect(circle.area).to be_within(0.01).of(314.16) # 面積 πr^2
@@ -26,7 +26,7 @@ RSpec.describe Reference::Basic::Shape do
   end
 
   describe Reference::Basic::Rectangle do
-    let(:rectangle) { Reference::Basic::Rectangle.new(5, 10) }
+    let(:rectangle) { described_class.new(5, 10) }
 
     it 'Rectangle の面積を計算する' do
       expect(rectangle.area).to eq(50) # 面積 幅×高さ
@@ -38,7 +38,7 @@ RSpec.describe Reference::Basic::Shape do
   end
 
   describe Reference::Basic::OverloadDemo do
-    let(:overload_demo) { Reference::Basic::OverloadDemo.new }
+    let(:overload_demo) { described_class.new }
 
     it '1 つの引数で正方形の面積を計算する' do
       expect(overload_demo.calculate(4)).to eq('Square area: 16')

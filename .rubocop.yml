@@ -1,14 +1,16 @@
-require:
+plugins:
   - rubocop-performance
+  - rubocop-rspec
 
 # 全体設定
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 4.0
   Exclude:
     - 'db/schema.rb'        # Rails の自動生成ファイル
     - 'bin/**/*'            # bin ディレクトリ
     - 'node_modules/**/*'   # Node.js の依存ファイル
+    - 'vendor/**/*'         # bundler の vendor ディレクトリ
 
 # Layout（レイアウト関連）
 Layout/LineEndStringConcatenationIndentation:

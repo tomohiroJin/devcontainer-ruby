@@ -21,7 +21,7 @@ RSpec.describe Reference::Patterns::DataProcessor do
 
   describe 'テンプレートメソッドの動作' do
     it '抽象クラスは直接使用できない' do
-      processor = Reference::Patterns::DataProcessor.new
+      processor = described_class.new
       expect { processor.process(data) }.to raise_error(NotImplementedError)
     end
   end
