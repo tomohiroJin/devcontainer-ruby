@@ -1,16 +1,19 @@
 # Devcontainer Ruby Reference
 
-このリポジトリは、Ruby の開発環境を提供し、基本構文から制御構文、クラスの書き方、関数型プログラミングまで幅広い学習をサポートします。RuboCop によるコードスタイルチェックや Rspec を用いたテスト駆動開発を簡単に実行できる設定が含まれています。
+[![CI](https://github.com/tomohiroJin/devcontainer-ruby/actions/workflows/ci.yml/badge.svg)](https://github.com/tomohiroJin/devcontainer-ruby/actions/workflows/ci.yml)
+
+このリポジトリは、Ruby の開発環境を提供し、基本構文から制御構文、クラスの書き方、関数型プログラミングまで幅広い学習をサポートします。RuboCop によるコードスタイルチェックや RSpec を用いたテスト駆動開発を簡単に実行できる設定が含まれています。
 
 ---
 
 ## **目次**
 
 1. [セットアップ](#セットアップ)
-2. [Rspec の使い方](#rspec-の使い方)
-3. [RDoc の生成](#rdoc-の生成)
-4. [Reference 一覧](#reference-一覧)
-5. [RuboCop の利用方法](#rubocop-の利用方法)
+2. [開発環境の構成](#開発環境の構成)
+3. [Rspec の使い方](#rspec-の使い方)
+4. [RDoc の生成](#rdoc-の生成)
+5. [Reference 一覧](#reference-一覧)
+6. [RuboCop の利用方法](#rubocop-の利用方法)
 
 ---
 
@@ -33,37 +36,54 @@
 
 2. VS Code でプロジェクトを開きます。
 3. `Dev Containers` 拡張機能を使ってコンテナ内で開発環境を起動します。
+4. コンテナ起動後、`postCreateCommand` により `bundle install` が自動で実行されます。
+
+---
+
+## **開発環境の構成**
+
+| 項目 | バージョン / 内容 |
+|------|------------------|
+| Ruby | `4.0.3`（`.ruby-version` に固定） |
+| ベースイメージ | `mcr.microsoft.com/devcontainers/ruby:4-bookworm` |
+| Language Server | [Ruby LSP](https://github.com/Shopify/ruby-lsp)（Shopify 製） |
+| Linter / Formatter | RuboCop（ruby-lsp 経由で利用） |
+| テスト | RSpec |
+| ドキュメント | RDoc |
+| CI | GitHub Actions（RuboCop + RSpec） |
+
+Language Server は Ruby LSP に一本化しています（以前は Solargraph を併用していましたが廃止しました）。RuboCop の実行・フォーマットは Ruby LSP 経由で自動的に行われます。
 
 ---
 
 ## **Rspec の使い方**
 
-このプロジェクトでは Rspec を使用してテストを実行します。
+このプロジェクトでは RSpec を使用してテストを実行します。
 
 ### **テストの実行**
 
 1. 全テストを実行:
 
    ```bash
-   rspec
+   bundle exec rspec
    ```
 
 2. 特定のテストファイルを実行:
 
    ```bash
-   rspec spec/reference/loops_spec.rb
+   bundle exec rspec spec/reference/loops_spec.rb
    ```
 
 3. 特定の行番号のテストを実行:
 
    ```bash
-   rspec spec/reference/loops_spec.rb:10
+   bundle exec rspec spec/reference/loops_spec.rb:10
    ```
 
 4. テスト結果を詳細に表示:
 
    ```bash
-   rspec --format documentation
+   bundle exec rspec --format documentation
    ```
 
 ---
@@ -119,19 +139,19 @@ RDoc を使用して、このプロジェクトのコードベースから HTML 
 ### **コードスタイルチェック**
 
 ```bash
-rubocop
+bundle exec rubocop
 ```
 
 ### **自動修正**
 
 ```bash
-rubocop --auto-correct
+bundle exec rubocop --autocorrect
 ```
 
 ### **特定ファイルをチェック**
 
 ```bash
-rubocop path/to/file.rb
+bundle exec rubocop path/to/file.rb
 ```
 
 ---

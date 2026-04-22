@@ -1,11 +1,23 @@
 {
   "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "cSpell.words": [
     "devcontainers",
     "Rubo",
-    "rubocop"
+    "rubocop",
+    "rdoc",
+    "rspec",
+    "solargraph"
   ],
-  "ruby.useLanguageServer": true,
-  "ruby.lsp.enabled": true,
-  "ruby.lsp.bundlerPath": "bundle"
+  "rubyLsp.formatter": "rubocop",
+  "rubyLsp.linters": ["rubocop"],
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.rulers": [120]
+  }
 }
