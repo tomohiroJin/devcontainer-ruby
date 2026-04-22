@@ -40,13 +40,13 @@ RSpec.describe Reference::Basic::ControlFlow do
   end
 
   # 三項演算子のテスト
-  describe '#even?' do
+  describe '#even_or_odd' do
     it '偶数を判定する' do
-      expect(control_flow.even?(4)).to eq('Even') # 偶数のケース
+      expect(control_flow.even_or_odd(4)).to eq('Even') # 偶数のケース
     end
 
     it '奇数を判定する' do
-      expect(control_flow.even?(7)).to eq('Odd') # 奇数のケース
+      expect(control_flow.even_or_odd(7)).to eq('Odd') # 奇数のケース
     end
   end
 end
