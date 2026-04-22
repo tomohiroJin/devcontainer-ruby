@@ -11,7 +11,7 @@
 #   control_flow = Reference::ControlFlow.new
 #   puts control_flow.check_number(10) # => "positive"
 #   puts control_flow.day_of_week("Monday") # => "Start of the work week"
-#   puts control_flow.is_even(4) # => "Even"
+#   puts control_flow.even?(4) # => "Even"
 module Reference
   # Ruby の基本構文を学ぶためのモジュール
   module Basic
@@ -61,9 +61,9 @@ module Reference
       #
       # 使用例:
       #   control_flow = Reference::ControlFlow.new
-      #   puts control_flow.is_even(4) # => "Even"
-      #   puts control_flow.is_even(3) # => "Odd"
-      def is_even(number) # rubocop:disable Naming/PredicateName
+      #   puts control_flow.even?(4) # => "Even"
+      #   puts control_flow.even?(3) # => "Odd"
+      def even?(number)
         number.even? ? 'Even' : 'Odd'
       end
     end

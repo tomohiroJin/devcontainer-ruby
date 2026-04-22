@@ -4,7 +4,8 @@ require 'reference/samples/fizz_buzz'
 
 RSpec.describe Reference::Samples::FizzBuzz do
   describe 'FizzBuzz' do
-    let(:fizz_buzz) { Reference::Samples::FizzBuzz.new }
+    let(:fizz_buzz) { described_class.new }
+
     it '1を渡すと文字列の1が返ること' do
       expect(fizz_buzz.fizz_buzz(1)).to eq('1')
     end

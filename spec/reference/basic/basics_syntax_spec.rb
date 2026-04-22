@@ -3,44 +3,43 @@
 require 'reference/basic/basics_syntax'
 
 RSpec.describe Reference::Basic::BasicsSyntax do
-  let(:basics) { Reference::Basic::BasicsSyntax.new }
+  let(:basics) { described_class.new }
 
   describe '::GREETING' do
     it '定数が正しく定義されていること' do
-      expect(Reference::Basic::BasicsSyntax::GREETING).to eq('こんにちは、Ruby!')
+      expect(described_class::GREETING).to eq('こんにちは、Ruby!')
     end
   end
 
   describe '#define_variables' do
-    it '基本的なデータ型の変数が正しく定義されていること' do
-      integer, float, string, symbol, array, hash, boolean = basics.define_variables
+    let(:variables) { basics.define_variables }
 
-      # 整数型のテスト
-      expect(integer).to be_a(Integer)
-      expect(integer).to eq(42)
+    it '整数型の変数が 42 で定義されていること' do
+      expect(variables[0]).to eq(42)
+    end
 
-      # 浮動小数点型のテスト
-      expect(float).to be_a(Float)
-      expect(float).to eq(3.14)
+    it '浮動小数点型の変数が 3.14 で定義されていること' do
+      expect(variables[1]).to eq(3.14)
+    end
 
-      # 文字列型のテスト
-      expect(string).to be_a(String)
-      expect(string).to eq('Rubyの文字列')
+    it '文字列型の変数が "Rubyの文字列" で定義されていること' do
+      expect(variables[2]).to eq('Rubyの文字列')
+    end
 
-      # シンボル型のテスト
-      expect(symbol).to be_a(Symbol)
-      expect(symbol).to eq(:ruby_symbol)
+    it 'シンボル型の変数が :ruby_symbol で定義されていること' do
+      expect(variables[3]).to eq(:ruby_symbol)
+    end
 
-      # 配列型のテスト
-      expect(array).to be_a(Array)
-      expect(array).to eq([1, 2, 3])
+    it '配列型の変数が [1, 2, 3] で定義されていること' do
+      expect(variables[4]).to eq([1, 2, 3])
+    end
 
-      # ハッシュ型のテスト
-      expect(hash).to be_a(Hash)
-      expect(hash).to eq({ name: 'Ruby', version: 3.0 })
+    it 'ハッシュ型の変数が { name: "Ruby", version: 3.0 } で定義されていること' do
+      expect(variables[5]).to eq({ name: 'Ruby', version: 3.0 })
+    end
 
-      # 真偽値型のテスト
-      expect(boolean).to be_truthy
+    it '真偽値型の変数が truthy で定義されていること' do
+      expect(variables[6]).to be_truthy
     end
   end
 

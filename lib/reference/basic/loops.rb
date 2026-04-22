@@ -64,7 +64,7 @@ module Reference
       #   puts loops.each_loop([1, 2, 3]) # => [2, 4, 6]
       def each_loop(array)
         array.map do |item|
-          (item * 2)
+          item * 2
         end
       end
 

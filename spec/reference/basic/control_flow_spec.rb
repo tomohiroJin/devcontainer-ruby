@@ -3,7 +3,7 @@
 require 'reference/basic/control_flow'
 
 RSpec.describe Reference::Basic::ControlFlow do
-  let(:control_flow) { Reference::Basic::ControlFlow.new }
+  let(:control_flow) { described_class.new }
 
   # if-else 文のテスト
   describe '#check_number' do
@@ -40,13 +40,13 @@ RSpec.describe Reference::Basic::ControlFlow do
   end
 
   # 三項演算子のテスト
-  describe '#is_even?' do
+  describe '#even?' do
     it '偶数を判定する' do
-      expect(control_flow.is_even(4)).to eq('Even') # 偶数のケース
+      expect(control_flow.even?(4)).to eq('Even') # 偶数のケース
     end
 
     it '奇数を判定する' do
-      expect(control_flow.is_even(7)).to eq('Odd') # 奇数のケース
+      expect(control_flow.even?(7)).to eq('Odd') # 奇数のケース
     end
   end
 end
