@@ -1,0 +1,761 @@
+{
+  "checked_at": "2026-11-05T14:45:14.162111812Z",
+  "trivy_version": "0.76.2",
+  "image_id": "sha256:a73cddfaa0c11dc06e9cdf276ae224d933ca04af5acef75e897622776a65d358",
+  "base_digest": "sha256:9e93d3bcd4541b6826e9bd63f7c5ad027d4689baa1f1cc45b613c5abd7d7e455",
+  "severity_counts": {
+    "HIGH": 75
+  },
+  "findings": [
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "bsdutils",
+      "InstalledVersion": "1:2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-54369",
+      "PkgName": "libacl1",
+      "InstalledVersion": "2.3.2-2+b1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "acl: Symlink traversal privilege escalation via libacl functions",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-54369"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libblkid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-12064",
+      "PkgName": "libcurl3t64-gnutls",
+      "InstalledVersion": "8.14.1-2+deb13u7",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "curl: curl: SSH host verification bypass when using schemeless URLs with SFTP/SCP",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-12064"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-8458",
+      "PkgName": "libcurl3t64-gnutls",
+      "InstalledVersion": "8.14.1-2+deb13u7",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "curl: libcurl: Unauthorized connection reuse due to a logical error",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-8458"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-113351",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.9.0-1~deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "expat: expat: Denial of Service via improper memory tracking in XML_ParserReset",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-113351"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-117610",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.9.0-1~deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "expat: expat: Denial of Service via NULL pointer dereference in external entity parsing",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-117610"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-118370",
+      "PkgName": "libexpat1",
+      "InstalledVersion": "2.9.0-1~deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "expat: expat: Denial of Service via integer overflow during XML attribute parsing",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-118370"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "liblastlog2-2",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libmount1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9538",
+      "PkgName": "libperl5.40",
+      "InstalledVersion": "5.40.1-6+deb13u1",
+      "FixedVersion": null,
+      "Status": "fix_deferred",
+      "Severity": "HIGH",
+      "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9538"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libsmartcols1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-119373",
+      "PkgName": "libsqlite3-0",
+      "InstalledVersion": "3.46.1-7+deb13u2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-119373"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-16742",
+      "PkgName": "libsystemd0",
+      "InstalledVersion": "257.13-1~deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-16742"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "libtinfo6",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-16742",
+      "PkgName": "libudev1",
+      "InstalledVersion": "257.13-1~deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "systemd: systemd-homed: Local privilege escalation via missing home-record signature verification",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-16742"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "libuuid1",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2013-7445",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: memory exhaustion via crafted Graphics Execution Manager (GEM) objects",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2013-7445"
+    },
+    {
+      "VulnerabilityID": "CVE-2019-19449",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: mounting a crafted f2fs filesystem image can lead to slab-out-of-bounds read access in f2fs_build_segment_manager in fs/f2fs/segment.c",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-19449"
+    },
+    {
+      "VulnerabilityID": "CVE-2019-19814",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: out-of-bounds write in __remove_dirty_segment in fs/f2fs/segment.c",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-19814"
+    },
+    {
+      "VulnerabilityID": "CVE-2021-3847",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: low-privileged user privileges escalation",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3847"
+    },
+    {
+      "VulnerabilityID": "CVE-2021-3864",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: descendant's dumpable setting with certain SUID binaries",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-3864"
+    },
+    {
+      "VulnerabilityID": "CVE-2024-21803",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: bluetooth: use-after-free vulnerability in af_bluetooth.c",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-21803"
+    },
+    {
+      "VulnerabilityID": "CVE-2024-58015",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: wifi: ath12k: Fix for out-of bound access error",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-58015"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-40025",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: f2fs: fix to do sanity check on node footer for non inode dnode",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-40025"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-23102",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: Linux kernel: Denial of Service due to incorrect SVE context restoration",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-23102"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-31568",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: s390/mm: Add missing secure storage access fixups for donated memory",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-31568"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-46279",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: mm/alloc_tag: clear codetag for pages allocated before page_ext initialization",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-46279"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-72042",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: ipmi: Fix user refcount underflow in event delivery",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-72042"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-89675",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: nfsd: fix UAF in async copy cancel and shutdown",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-89675"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-90315",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: PCI/sysfs: Add lockdown checks to legacy I/O and memory handlers",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-90315"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98118",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: netfs: Fix readahead synchronisation issues by loading all folios upfront",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98118"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98364",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: xfrm: hold net_device reference under RCU in bundle creation",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98364"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98466",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: KVM: arm64: Transfer the hyp stack pages out of the host stage-2",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98466"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98715",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: KVM: SVM: Preserve TLB control (i.e. pending TLB flush) on failed VMRUN",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98715"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98853",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: net: gso: limit recursive IP-in-IP segmentation",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98853"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-98999",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: drm/xe: Fix stale pinned_link entry when fb-pin performs the final unpin",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-98999"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99109",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.115-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "kernel: smb: client: reject SetEA requests that do not fit the request buffer",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-99109"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "login",
+      "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "mount",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "ncurses-base",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2025-69720",
+      "PkgName": "ncurses-bin",
+      "InstalledVersion": "6.5+20250216-2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "ncurses: ncurses: Buffer overflow vulnerability may lead to arbitrary code execution.",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-69720"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9538",
+      "PkgName": "perl",
+      "InstalledVersion": "5.40.1-6+deb13u1",
+      "FixedVersion": null,
+      "Status": "fix_deferred",
+      "Severity": "HIGH",
+      "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9538"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9538",
+      "PkgName": "perl-base",
+      "InstalledVersion": "5.40.1-6+deb13u1",
+      "FixedVersion": null,
+      "Status": "fix_deferred",
+      "Severity": "HIGH",
+      "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9538"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-9538",
+      "PkgName": "perl-modules-5.40",
+      "InstalledVersion": "5.40.1-6+deb13u1",
+      "FixedVersion": null,
+      "Status": "fix_deferred",
+      "Severity": "HIGH",
+      "Title": "perl-Archive-Tar: perl-Archive-Tar: Denial of Service via crafted tar header with large entry size",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-9538"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-96512",
+      "PkgName": "sudo",
+      "InstalledVersion": "1.9.16p2-3+deb13u2",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "sudo: sudo: TZ environment variable allows bypass of NOTBEFORE/NOTAFTER time-based authorization",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-96512"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76642",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: failed external mount helper still runs privileged X-mount post-hooks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76642"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78408",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: nsenter --join-cgroup leaks root cgroup migration authority",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78408"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78409",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: X-mount.subdir detached-tree resolution can escape via intermediate symlinks",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78409"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-78410",
+      "PkgName": "util-linux",
+      "InstalledVersion": "2.41.5-0+deb13u1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "util-linux: util-linux: restricted bind mounts do not pin the source, allowing X-mount.owner/group/mode redirection",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-78410"
+    },
+    {
+      "VulnerabilityID": "CVE-2026-76844",
+      "PkgName": "zlib1g",
+      "InstalledVersion": "1:1.3.dfsg+really1.3.1-1+b1",
+      "FixedVersion": null,
+      "Status": "affected",
+      "Severity": "HIGH",
+      "Title": "webpack-dev-middleware: webpack-dev-middleware: Information Disclosure via Path Traversal",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-76844"
+    }
+  ]
+}
