@@ -36,7 +36,9 @@
 
 2. VS Code でプロジェクトを開きます。
 3. `Dev Containers` 拡張機能を使ってコンテナ内で開発環境を起動します。
-4. コンテナ起動後、`postCreateCommand` により `bundle install` が自動で実行されます。
+4. コンテナ起動後、`scripts/setup.sh` が Ruby の実版を照合し、コミット済み lockfile に従って依存をインストールします。
+
+VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統一しています。現在の Ruby/RSpec ファイルはデバッグ構成から起動できます。更新方針、バージョン一覧、監査・検証の記録は [保守記録](docs/maintenance.md) を参照してください。
 
 ---
 
@@ -44,13 +46,13 @@
 
 | 項目 | バージョン / 内容 |
 |------|------------------|
-| Ruby | `4.0.3`（`.ruby-version` に固定） |
-| ベースイメージ | `mcr.microsoft.com/devcontainers/ruby:4-bookworm` |
+| Ruby | `4.0.9`（`.ruby-version` に固定） |
+| ベースイメージ | `ruby:4.0.9-slim-trixie` + 必要な開発ツール |
 | Language Server | [Ruby LSP](https://github.com/Shopify/ruby-lsp)（Shopify 製） |
 | Linter / Formatter | RuboCop（ruby-lsp 経由で利用） |
 | テスト | RSpec |
 | ドキュメント | RDoc |
-| CI | GitHub Actions（RuboCop + RSpec） |
+| CI | GitHub Actions（RuboCop・RSpec・gem/コンテナ監査） |
 
 Language Server は Ruby LSP に一本化しています（以前は Solargraph を併用していましたが廃止しました）。RuboCop の実行・フォーマットは Ruby LSP 経由で自動的に行われます。
 

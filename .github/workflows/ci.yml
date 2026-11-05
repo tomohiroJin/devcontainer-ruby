@@ -5,24 +5,79 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  schedule:
+    - cron: '23 3 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
+  workflow-lint:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Validate GitHub Actions workflows
+        run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12 .github/workflows/ci.yml
+
   test:
     name: RSpec & RuboCop
+    timeout-minutes: 30
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: ruby/setup-ruby@de492cf36cbab201753d720ce4f4e336cd688c94 # v1.336.0
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+      - run: bundle exec rubocop --parallel
+      - run: bundle exec rspec
+      - run: bundle exec bundle-audit update
+      - run: bundle exec bundle-audit check --format json > gem-audit.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: ruby-gem-audit
+          path: gem-audit.json
 
-      - name: Run RuboCop
-        run: bundle exec rubocop --parallel
-
-      - name: Run RSpec
-        run: bundle exec rspec
+  container-security:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build and test configured Dev Container
+        uses: devcontainers/ci@513af61f4de4f75d37e4438f184ba4358f0fc1ca # v0.3
+        with:
+          imageName: ruby-development-audit
+          push: never
+          runCmd: bash scripts/test_setup_isolation.sh && bundle exec rspec && bundle exec rubocop && bundle exec bundle-audit check --update
+      - name: Scan configured Dev Container
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          version: v0.76.2
+          scanners: vuln
+          image-ref: ruby-development-audit:latest
+          format: json
+          output: container-audit.json
+          severity: HIGH,CRITICAL
+          ignore-unfixed: false
+          exit-code: '0'
+      - name: Test security gate policy
+        run: python3 -m unittest discover -s scripts -p 'test_audit_gate.py'
+      - name: Check new, fixable, or expired findings
+        run: python3 scripts/check_container_audit.py container-audit.json security/container-baseline.json
+      - name: Record resolved image
+        if: always()
+        run: docker image inspect ruby-development-audit:latest > container-image.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: ruby-container-audit
+          path: |
+            container-audit.json
+            container-image.json
