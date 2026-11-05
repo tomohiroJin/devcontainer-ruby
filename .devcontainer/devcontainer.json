@@ -13,5 +13,8 @@
   "remoteUser": "vscode",
   "build": {
     "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "BUNDLE_APP_CONFIG": "${containerWorkspaceFolder}/.bundle"
   }
 }

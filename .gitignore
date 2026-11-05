@@ -45,3 +45,6 @@
 
 # コンテナ関連ファイル (Dockerを使用している場合)
 docker-compose.override.yml
+
+# Python security-gate test bytecode
+/scripts/__pycache__/

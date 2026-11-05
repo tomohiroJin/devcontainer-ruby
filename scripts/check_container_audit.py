@@ -24,13 +24,10 @@ def evaluate(report, baseline, today):
         raise ValueError("OS vulnerability scan result is missing")
     if not baseline.get("owner") or not baseline.get("tracking_issue"):
         raise ValueError("Baseline needs an owner and tracking issue")
-    if today >= datetime.date.fromisoformat(baseline["review_due"]):
-        raise ValueError(
-            "Reviewed findings expired: reassess before renewing the baseline"
-        )
+    review_due = datetime.date.fromisoformat(baseline["review_due"])
     known = {}
     for entry in baseline["findings"]:
-        if not entry.get("reason") or entry["kind"] not in ("unfixed", "pip-sbom-only"):
+        if not entry.get("reason") or entry["kind"] != "unfixed":
             raise ValueError("Every baseline entry needs a supported reason")
         known[identity(entry, entry)] = entry
     blocked, accepted = [], []
@@ -51,15 +48,8 @@ def evaluate(report, baseline, today):
                 blocked.append(label + ": new finding or changed package/severity")
             elif entry["kind"] == "unfixed" and finding.get("FixedVersion"):
                 blocked.append(label + ": a fix is now available")
-            elif entry["kind"] == "pip-sbom-only" and not (
-                result.get("Class") == "lang-pkgs"
-                and result.get("Type") == "python-pkg"
-                and finding.get("VulnerabilityID") == "CVE-2025-47273"
-                and finding.get("PkgName") == "setuptools"
-                and finding.get("InstalledVersion") == "70.3.0"
-                and finding.get("FixedVersion") == "78.1.1"
-            ):
-                blocked.append(label + ": outside reviewed pip SBOM scope")
+            elif today >= review_due:
+                blocked.append(label + ": reviewed finding expired; reassess before renewal")
             else:
                 accepted.append(label)
     return blocked, accepted
@@ -77,6 +67,12 @@ def main():
     except (ValueError, KeyError, TypeError, IndexError, OSError) as exc:
         print(f"Audit gate failed: {exc}", file=sys.stderr)
         return 1
+    counts = {severity: sum(
+        finding.get("Severity") == severity
+        for result in report["Results"]
+        for finding in result.get("Vulnerabilities") or []
+    ) for severity in ("HIGH", "CRITICAL")}
+    print(f"Raw findings: HIGH={counts['HIGH']}; CRITICAL={counts['CRITICAL']}")
     print(f"Reviewed: {len(accepted)}; blocking: {len(blocked)}")
     print(f"Owner: {baseline['owner']}; review due: {baseline['review_due']}")
     print(f"Tracking: {baseline['tracking_issue']}")

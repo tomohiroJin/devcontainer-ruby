@@ -24,5 +24,5 @@ RUN --mount=type=secret,id=proxy_ca \
 RUN ruby -rjson -rfileutils -rrbconfig -e 'abort "unexpected JSON" unless JSON::VERSION == "3.1.0"; abort "wrong JSON source" unless $LOADED_FEATURES.any? { |f| f.include?("/json-3.1.0/lib/json.rb") }; [RbConfig::CONFIG.fetch("rubylibdir"), RbConfig::CONFIG.fetch("archdir")].each { |dir| FileUtils.rm_rf(File.join(dir, "json")); FileUtils.rm_f(File.join(dir, "json.rb")) }; Dir.glob(File.join(Gem.default_specifications_dir, "json-*.gemspec")).each { |f| FileUtils.rm_f(f) }' \
     && ruby -rjson -e 'abort "unexpected JSON" unless JSON::VERSION == "3.1.0"; abort "JSON round trip failed" unless JSON.parse(JSON.generate({"日本語" => [1, true, nil]})) == {"日本語" => [1, true, nil]}'
 
-USER vscode
+USER $USERNAME
 WORKDIR /workspaces/devcontainer-ruby

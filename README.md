@@ -52,7 +52,7 @@ VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統�
 | Linter / Formatter | RuboCop（ruby-lsp 経由で利用） |
 | テスト | RSpec |
 | ドキュメント | RDoc |
-| CI | GitHub Actions（RuboCop + RSpec） |
+| CI | GitHub Actions（RuboCop・RSpec・gem/コンテナ監査） |
 
 Language Server は Ruby LSP に一本化しています（以前は Solargraph を併用していましたが廃止しました）。RuboCop の実行・フォーマットは Ruby LSP 経由で自動的に行われます。
 
