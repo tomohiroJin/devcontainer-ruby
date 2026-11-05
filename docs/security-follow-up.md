@@ -2,7 +2,7 @@
 
 検査日 2026-11-05 / Trivy 0.76.2 / Debian 13.7。対象イメージ ID と全 75 件のパッケージ別指摘は [container-audit.json](container-audit.json) に保存。Critical **0 件**、High **75 件（37 CVE）**。修正バージョンが DB に掲載されている指摘は **0 件**。元の MCR イメージの 451 件から削減し、修正可能だった JSON の Critical を解消した。
 
-追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-11-12**。週次 CI で継続検査し、Debian 修正版の公開時に再ビルドする。修正完了まで Issue の完了条件は未充足として扱う。CI の High/Critical ゲートは失敗する状態を維持し、例外や ignore は追加しない。
+追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-11-12**。週次 CI で継続検査し、Debian 修正版の公開時に再ビルドする。修正完了まで Issue の完了条件は未充足として扱う。CIは全75検出をartifactに残す。[期限付き監査方針](ci-security-policy.md)で既知・修正版未提供のパッケージ/版/CVEだけを2026-11-12まで追跡対象とし、新規検出・修正版の提供・期限切れは失敗させる。
 
 開発コンテナとして使い、外部へサービスを公開しない。未知の Repository や入力を実行しない。これは全 CVE の回避を保証する措置ではない。各指摘の影響評価と修正版の公開状況を次回確認時に追記する。Git/sudo/build-essential は開発機能に必要なため保持した。
 

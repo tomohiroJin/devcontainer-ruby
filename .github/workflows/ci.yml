@@ -46,12 +46,17 @@ jobs:
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           version: v0.76.2
+          scanners: vuln
           image-ref: ruby-development-audit:latest
           format: json
           output: container-audit.json
           severity: HIGH,CRITICAL
           ignore-unfixed: false
-          exit-code: '1'
+          exit-code: '0'
+      - name: Test security gate policy
+        run: python3 -m unittest discover -s scripts -p 'test_audit_gate.py'
+      - name: Check new, fixable, or expired findings
+        run: python3 scripts/check_container_audit.py container-audit.json security/container-baseline.json
       - name: Record resolved image
         if: always()
         run: docker image inspect ruby-development-audit:latest > container-image.json

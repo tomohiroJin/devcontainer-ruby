@@ -44,7 +44,7 @@ bundle exec bundle-audit check --update
 
 CI は push/PR/週次/手動で同じ検証を実行する。別ジョブで Dockerfile から最小イメージをビルドし、コンテナ内で依存を frozen install してテスト・gem 監査し、Trivy 0.76.2 で OS/同梱パッケージを検査する。postCreateCommand で作られるワークスペース内の gem はイメージ層に含まれないため、Gemfile.lock 全体の bundler-audit で別途検査する。
 
-Critical/High は未修正版も含め CI を失敗させる。残件は CVE/GHSA・影響・回避策・担当・期限を記録して追跡する。根拠なしの ignore や一律の ignore-unfixed は使わない。
+Critical/Highは全検出を保存し、[期限付き監査方針](ci-security-policy.md)に従って新規・修正可能・期限切れの項目を失敗させる。残件は CVE/GHSA・影響・回避策・担当・期限を記録して追跡する。根拠なしの ignore や一律の ignore-unfixed は使わない。
 
 ## 実行結果
 
@@ -58,4 +58,4 @@ GUI の補完・定義ジャンプ・ブレークポイント・保存時整形�
 - bundler-audit **0.9.3**、ruby-advisory-db **516ea4757d5eec778c49af8371c23309c4b70f42**（更新 2026-11-04）で、直接・推移的依存の公開脆弱性は **0 件**。[JSON 結果](gem-audit.json)。
 - Dev Container CLI **0.90.0** で構成の読み取りを確認した。実イメージのビルドは Docker **29.9.2** で実施した。管理環境の TLS proxy CA は build secret / read-only mount で渡し、証明書検証を有効にしたまま検証した。
 
-- 最終イメージの Trivy 0.76.2: **Critical 0 / High 75**（37 CVE、修正版の提供なし）。[全指摘とイメージ ID](container-audit.json)、[担当・期限・追跡](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。CI は指摘を無視せず失敗させる。
+- 最終イメージの Trivy 0.76.2: **Critical 0 / High 75**（37 CVE、修正版の提供なし）。[全指摘とイメージ ID](container-audit.json)、[担当・期限・追跡](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。CIは全指摘を保存し、期限付き監査方針に従って判定する。
