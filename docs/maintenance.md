@@ -1,27 +1,30 @@
 # 開発環境の保守記録
 
-調査日: 2026-11-05。対象: Issue #10、基点 `8979c3440d972d16772d93227e4aadb38aea39b2`。
+調査日: 2026-11-05（初回）、2026-11-20（再確認・Ruby セキュリティ更新）。対象: Issue #10、基点 `8979c3440d972d16772d93227e4aadb38aea39b2`。
 
 ## 採用方針と一次情報
 
 | 項目 | 従来 | 採用・理由 | 根拠 |
 | --- | --- | --- | --- |
-| Ruby | 4.0.3 | 4.0.9。最新安定パッチ。4.1 preview は対象外 | [公式配布](https://www.ruby-lang.org/en/downloads/) |
+| Ruby | 4.0.3 | 4.0.10（11-05 時点は 4.0.9）。2026-11-18 公開の Regexp/String 脆弱性 7 件（一部 RCE の PoC あり）の修正版。4.1 は preview のため対象外 | [4.0.10 リリース](https://www.ruby-lang.org/en/news/2026/11/18/ruby-4-0-10-released/)、[セキュリティ告知](https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/) |
 | Ruby サポート | 未記載 | 4.0 は normal maintenance、終了日は公式に TBD | [公式保守期間](https://www.ruby-lang.org/en/downloads/branches/) |
 | OS | Bookworm | Debian 13 Trixie。不要なパッケージの削減と新しいセキュリティ更新基盤のため移行。LTS 終了予定 2030-06-30 | [Debian リリース](https://www.debian.org/releases/) |
-| Dev Container | MCR Ruby 4 Bookworm、common-utils/github-cli Features | 公式 ruby:4.0.9-slim-trixie に build-essential/git/sudo/CA と非 root ユーザーのみ追加。不要なグローバル gem/Node/DB ツールを減らす | [公式 Ruby イメージ](https://hub.docker.com/_/ruby) |
+| Dev Container | MCR Ruby 4 Bookworm、common-utils/github-cli Features | 公式 ruby:4.0.10-slim-trixie（index digest `sha256:a4b3e62b…`）に build-essential/git/sudo/CA と非 root ユーザーのみ追加。不要なグローバル gem/Node/DB ツールを減らす | [公式 Ruby イメージ](https://hub.docker.com/_/ruby) |
 | ruby-lsp | 未固定 | 0.26.11 | [RubyGems API](https://rubygems.org/api/v1/gems/ruby-lsp.json) |
 | debug | 未固定 | 1.11.1 | [RubyGems](https://rubygems.org/gems/debug) |
 | rake | ~>13.0 | 13.4.2 | [RubyGems](https://rubygems.org/gems/rake) |
 | rdoc | 未固定 | 8.1.0 | [RubyGems](https://rubygems.org/gems/rdoc) |
-| rspec | ~>3.13 | 3.13.2 | [RubyGems](https://rubygems.org/gems/rspec) |
-| rubocop | ~>1.86 | 1.92.2 | [RubyGems](https://rubygems.org/gems/rubocop) |
+| rspec | ~>3.13 | 3.13.2（rspec-core 3.13.7 等） | [RubyGems](https://rubygems.org/gems/rspec) |
+| rubocop | ~>1.86 | 1.92.3 | [RubyGems](https://rubygems.org/gems/rubocop) |
 | rubocop-performance | 未固定 | 1.27.0 | [RubyGems](https://rubygems.org/gems/rubocop-performance) |
 | rubocop-rspec | 未固定 | 3.10.2 | [RubyGems](https://rubygems.org/gems/rubocop-rspec) |
+| Bundler | 4.0.x（イメージ同梱 4.0.20） | 4.1.0（2026-11-16 安定版、Ruby >= 3.2 対応）。Dockerfile と `BUNDLED WITH` を一致させる | [RubyGems](https://rubygems.org/gems/bundler/versions/4.1.0) |
 | bundler-audit | なし | 0.9.3、Ruby Advisory Database で全依存を検査 | [RubyGems](https://rubygems.org/gems/bundler-audit) |
-| CI Actions | checkout v4、setup-ruby v1 | checkout v7.0.1、setup-ruby v1、devcontainers/ci v0.3、trivy-action v0.36.0 をコミット SHA 固定 | 各公式 GitHub リポジトリの tag/commit API |
+| CI Actions | checkout v4、setup-ruby v1 | checkout v7.0.1、setup-ruby v1.343.0（Ruby 4.0.10 対応版）、setup-go v7.1.0（actionlint 用 Go 1.25.x）、upload-artifact v7.0.2、devcontainers/ci v0.3、trivy-action v0.36.0 をコミット SHA 固定 | 各公式 GitHub リポジトリの tag/commit API |
 
 Gemfile の許容範囲とは別に、直接・推移的依存と Bundler はコミットした `Gemfile.lock` で固定する。通常の起動は frozen install、更新担当は `bundle update` 後にテスト・監査・lockfile をまとめてレビューする。Ruby のパッチ更新は `.ruby-version`、Dockerfile のタグ/digest、CI を同時に確認する。週次 Dependabot と CI で追跡し、次回手動見直しは 2026-12-05。
+
+2026-11-20 時点で更新しなかった推移的依存: `diff-lcs` 2.0.0（rspec-expectations/mocks 3.13 系が `< 2.0` を要求）、`prism` 2.x（ruby-lsp 0.26.11 が `< 2.0` を要求）。上流の制約が外れた時点で Dependabot により更新する。
 
 ## VS Code 拡張
 
@@ -39,10 +42,13 @@ Git UI、Live Share、テーマ、日本語表示、Markdown、Excel viewer、Li
 bash scripts/setup.sh
 bundle exec rspec
 bundle exec rubocop
+bundle exec ruby scripts/test_editor_features.rb
 bundle exec bundle-audit check --update
 ```
 
-CI は push/PR/週次/手動で同じ検証を実行する。別ジョブで Dockerfile から最小イメージをビルドし、コンテナ内で依存を frozen install してテスト・gem 監査し、Trivy 0.76.2 で OS/同梱パッケージを検査する。postCreateCommand で作られるワークスペース内の gem はイメージ層に含まれないため、Gemfile.lock 全体の bundler-audit で別途検査する。
+`scripts/test_editor_features.rb` は VS Code が使う Ruby LSP を stdio で起動し、`.vscode/settings.json` と同じ formatter/linter 設定で、spec から lib のクラスへの定義ジャンプ、定数補完、RuboCop による整形（保存時整形の実体）と診断、および rdbg のブレークポイント停止と変数評価を検証する。GUI 操作そのものの代替ではない。
+
+CI は push/PR/週次/手動で同じ検証を実行する。`workflow-lint` ジョブは actionlint 1.7.12 でワークフローを検査する。PR 以外（main への push・週次・手動）の実行は別々の concurrency グループで、互いにキャンセルしない。別ジョブで Dockerfile から最小イメージをビルドし、コンテナ内で依存を frozen install してテスト・gem 監査し、Trivy 0.76.2 で OS/同梱パッケージを検査する。postCreateCommand で作られるワークスペース内の gem はイメージ層に含まれないため、Gemfile.lock 全体の bundler-audit で別途検査する。
 
 Critical/Highは全検出を保存し、[期限付き監査方針](ci-security-policy.md)に従って新規・修正可能・期限切れの項目を失敗させる。残件は CVE/GHSA・影響・回避策・担当・期限を記録して追跡する。根拠なしの ignore や一律の ignore-unfixed は使わない。
 
