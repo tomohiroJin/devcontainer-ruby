@@ -81,6 +81,17 @@ class AuditPolicyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             evaluate(self.report, self.baseline, self.today)
 
+    def test_unreviewed_candidate_fails_closed(self):
+        self.baseline["findings"][0]["reason"] = "REQUIRES HUMAN REVIEW: not approved"
+        with self.assertRaises(ValueError):
+            evaluate(self.report, self.baseline, self.today)
+
+    def test_blocked_label_has_full_identity(self):
+        self.finding["FixedVersion"] = "2"
+        blocked, _ = evaluate(self.report, self.baseline, self.today)
+        for part in ("os-pkgs", "debian", "CVE-example", "libexample", "HIGH", "fixed-in=2"):
+            self.assertIn(part, blocked[0])
+
 
 if __name__ == "__main__":
     unittest.main()

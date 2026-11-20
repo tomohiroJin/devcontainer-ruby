@@ -4,6 +4,10 @@ import datetime
 import json
 import sys
 
+# Marker written by the documented candidate generator. A candidate is not an
+# approved baseline, so the gate refuses it instead of accepting its findings.
+UNREVIEWED_MARKER = "REQUIRES HUMAN REVIEW"
+
 
 def identity(result, finding):
     return tuple(
@@ -29,6 +33,11 @@ def evaluate(report, baseline, today):
     for entry in baseline["findings"]:
         if not entry.get("reason") or entry["kind"] != "unfixed":
             raise ValueError("Every baseline entry needs a supported reason")
+        if UNREVIEWED_MARKER in entry["reason"].upper():
+            raise ValueError(
+                "Baseline contains an unreviewed candidate entry: "
+                + " ".join(str(v) for v in identity(entry, entry))
+            )
         known[identity(entry, entry)] = entry
     blocked, accepted = [], []
     for result in report["Results"]:
@@ -40,10 +49,10 @@ def evaluate(report, baseline, today):
             if finding.get("Severity") not in ("HIGH", "CRITICAL"):
                 continue
             entry = known.get(identity(result, finding))
-            label = " ".join(
-                str(finding[k])
-                for k in ("VulnerabilityID", "PkgName", "InstalledVersion")
-            )
+            # Full identity plus FixedVersion so a reviewer can act from the log.
+            label = " ".join(str(v) for v in identity(result, finding))
+            if finding.get("FixedVersion"):
+                label += " fixed-in=" + str(finding["FixedVersion"])
             if entry is None:
                 blocked.append(label + ": new finding or changed package/severity")
             elif entry["kind"] == "unfixed" and finding.get("FixedVersion"):

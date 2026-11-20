@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ruby:4.0.9-slim-trixie@sha256:9e93d3bcd4541b6826e9bd63f7c5ad027d4689baa1f1cc45b613c5abd7d7e455
+FROM ruby:4.0.10-slim-trixie@sha256:a4b3e62bfe56bd267a3aeacc1b89aea96be919faa0c7d77c6346e2ac14f6c175
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -16,7 +16,7 @@ RUN apt-get update \
 # Optional secret supports managed TLS proxies without persisting their CA.
 RUN --mount=type=secret,id=proxy_ca \
     if [ -f /run/secrets/proxy_ca ]; then export SSL_CERT_FILE=/run/secrets/proxy_ca; fi; \
-    gem install bundler --version 4.0.24 --no-document \
+    gem install bundler --version 4.1.0 --no-document \
     && gem install json --version 3.1.0 --no-document
 
 # Replace the vulnerable bundled JSON copy, including its library/native files.

@@ -9,9 +9,11 @@ on:
     - cron: '23 3 * * 1'
   workflow_dispatch:
 
+# Only superseded PR runs are cancelled; push, schedule and manual audits on main
+# get separate groups so a weekly audit is never cancelled by a push.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
@@ -22,6 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version: '1.25.x' # actionlint v1.7.12 go.mod: go 1.25.0
+          cache: false
       - name: Validate GitHub Actions workflows
         run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12 .github/workflows/ci.yml
 
@@ -55,7 +61,12 @@ jobs:
         with:
           imageName: ruby-development-audit
           push: never
-          runCmd: bash scripts/test_setup_isolation.sh && bundle exec rspec && bundle exec rubocop && bundle exec bundle-audit check --update
+          runCmd: >-
+            bash scripts/test_setup_isolation.sh
+            && bundle exec rspec
+            && bundle exec rubocop
+            && bundle exec ruby scripts/test_editor_features.rb
+            && bundle exec bundle-audit check --update
       - name: Scan configured Dev Container
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
