@@ -28,3 +28,22 @@
 8(g) actionlint 1.7.12 をローカルで実行して成功を確認した。CI に固定版を `go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12` で実行する job も追加し、今後の実行をログで追跡可能にする。
 
 今回のゲートテスト/分離テストは成功したが、VS Code GUI と Dependabot 初回ジョブは未確認。新たな Trivy DB による脆弱性件数の再評価は CI の実 artifact を参照し、以前の High 75 件を「今回新しく検査した件数」とは扱わない。
+
+## 再検証（2 回目）の指摘への対応（2026-11-20）
+
+[再検証コメント](https://github.com/tomohiroJin/devcontainer-ruby/pull/11#issuecomment-6673013023) の新たな指摘に対応する。
+
+| 番号 | 対応・判断 | 確認 |
+| --- | --- | --- |
+| 1 | `scripts/test_setup_isolation.sh` のパス文字列比較（常に真）を削除。上流既定の `/usr/local/bundle/config` と、継承した `BUNDLE_APP_CONFIG` の config の両方を明示的に監視する。1 つ目のフィクスチャは `BUNDLE_APP_CONFIG=/usr/local/bundle` を与えて上流イメージの状態を CI でも再現する | Ruby 4.0.10 コンテナで成功。`setup.sh` から `export BUNDLE_APP_CONFIG` を削除すると失敗（rc=1）することを確認 |
+| 2 | 監査ゲートが `REQUIRES HUMAN REVIEW` を含む reason の entry を `ValueError` で拒否する。候補ファイルをそのまま baseline に置いても通らない | 判定テスト `test_unreviewed_candidate_fails_closed` を追加 |
+| 3 | containerEnv の `BUNDLE_APP_CONFIG` がコンテナ内の他ディレクトリにも適用されることを README に明記。コンテナはこのリポジトリ専用として扱う | 文書のみ |
+| 4 | concurrency グループに `github.event_name` を含め、`cancel-in-progress` は PR のみに限定。main の push・週次・手動実行が互いにキャンセルされない | actionlint 1.7.12 成功 |
+| 5 | `docs/maintenance.md` の Actions 版表記と `workflow-lint` の説明を更新。`workflow-lint` は `actions/setup-go`（v7.1.0、SHA 固定、Go 1.25.x）で Go を明示し、ランナー同梱の Go に依存しない | CI の `workflow-lint` 成功 |
+
+### 同時に対応した変更
+
+- **Ruby 4.0.10 へのセキュリティ更新**: 2026-11-18 に Regexp と String の大文字小文字変換の脆弱性 7 件（GHSA、一部は RCE の PoC あり）が公開された。`.ruby-version`、ベースイメージ（`ruby:4.0.10-slim-trixie`、digest 固定）、`Gemfile.lock` の `RUBY VERSION`、CI の setup-ruby（v1.343.0）を同時に更新した。4.0.10 の同梱 JSON は 2.18.3 で、CVE-2026-33210（修正版 2.19.2 以上）と CVE-2026-54696（修正版 2.19.9 以上）の対象のままなので、JSON 3.1.0 への置き換えは継続する。
+- **Bundler 4.1.0 と gem の更新**: rubocop 1.92.3、rubocop-ast 1.53.0、rspec 系 3.13 の最新パッチなど。diff-lcs 2.x と prism 2.x は上流の制約のため据え置き（[保守記録](maintenance.md)）。
+- **エディター機能のヘッドレス検証**: `scripts/test_editor_features.rb` を追加し CI の Dev Container 内で実行する。設定を壊すと失敗することを確認した（formatter/linter を `none` にすると整形・診断の 2 項目が FAIL）。
+- **監査ゲートのログ**: ブロック時に Class/Type/CVE/パッケージ/導入版/深刻度/修正版を出力し、ログだけで再評価に着手できるようにした。
