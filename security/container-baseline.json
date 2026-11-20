@@ -13,7 +13,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -23,7 +23,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -33,7 +33,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -43,7 +43,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. bsdutils is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/bsdutils/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-105437",
@@ -53,7 +53,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Git CLI required for development; reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Git CLI required for development (present since the 2026-11-05 image; CVE newly listed in the Trivy DB); reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-111760",
@@ -63,7 +63,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Git CLI required for development; reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Git CLI required for development (present since the 2026-11-05 image; CVE newly listed in the Trivy DB); reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-114466",
@@ -73,7 +73,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Git CLI required for development; reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Git CLI required for development (present since the 2026-11-05 image; CVE newly listed in the Trivy DB); reached when cloning/fetching or running commands against a repository or remote. Use trusted repositories and remotes only; do not run untrusted hooks. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-105437",
@@ -83,7 +83,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-111760",
@@ -93,7 +93,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-114466",
@@ -103,7 +103,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Documentation-only package (man pages; no executable files in dpkg -L). The CVE is attributed to the git source package; the executable exposure is tracked on git. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/git-man/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-54369",
@@ -113,7 +113,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Filesystem ACL support library available to native tools. Workspace metadata and tool inputs remain exposure surfaces; avoid untrusted filesystems and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libacl1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Filesystem ACL support library available to native tools. Workspace metadata and tool inputs remain exposure surfaces; avoid untrusted filesystems and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libacl1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -123,7 +123,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -133,7 +133,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -143,7 +143,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -153,7 +153,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libblkid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libblkid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-12064",
@@ -163,7 +163,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Network client library used by Git HTTPS. Untrusted remote responses may reach it; restrict repositories/remotes to trusted sources while awaiting vendor fixes. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Network client library used by Git HTTPS. Untrusted remote responses may reach it; restrict repositories/remotes to trusted sources while awaiting vendor fixes. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-8458",
@@ -173,7 +173,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Network client library used by Git HTTPS. Untrusted remote responses may reach it; restrict repositories/remotes to trusted sources while awaiting vendor fixes. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Network client library used by Git HTTPS. Untrusted remote responses may reach it; restrict repositories/remotes to trusted sources while awaiting vendor fixes. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-113351",
@@ -183,7 +183,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-115506",
@@ -193,7 +193,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-117610",
@@ -203,7 +203,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-118370",
@@ -213,7 +213,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Native XML parser library. Malicious XML may reach native consumers; absence of an XML service does not prove this library is unreachable. Avoid processing untrusted XML. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libexpat1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-107364",
@@ -223,7 +223,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112315",
@@ -233,7 +233,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112316",
@@ -243,7 +243,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112317",
@@ -253,7 +253,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112318",
@@ -263,7 +263,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112319",
@@ -273,7 +273,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112320",
@@ -283,7 +283,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112321",
@@ -293,7 +293,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112322",
@@ -303,7 +303,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112323",
@@ -313,7 +313,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-118380",
@@ -323,7 +323,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119079",
@@ -333,7 +333,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71199",
@@ -343,7 +343,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71200",
@@ -353,7 +353,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos/GSSAPI client library pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libgssapi-krb5-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-107364",
@@ -363,7 +363,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112315",
@@ -373,7 +373,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112316",
@@ -383,7 +383,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112317",
@@ -393,7 +393,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112318",
@@ -403,7 +403,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112319",
@@ -413,7 +413,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112320",
@@ -423,7 +423,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112321",
@@ -433,7 +433,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112322",
@@ -443,7 +443,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112323",
@@ -453,7 +453,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-118380",
@@ -463,7 +463,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119079",
@@ -473,7 +473,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71199",
@@ -483,7 +483,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71200",
@@ -493,7 +493,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libk5crypto3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libk5crypto3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-107364",
@@ -503,7 +503,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112315",
@@ -513,7 +513,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112316",
@@ -523,7 +523,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112317",
@@ -533,7 +533,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112318",
@@ -543,7 +543,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112319",
@@ -553,7 +553,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112320",
@@ -563,7 +563,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112321",
@@ -573,7 +573,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112322",
@@ -583,7 +583,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112323",
@@ -593,7 +593,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-118380",
@@ -603,7 +603,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119079",
@@ -613,7 +613,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71199",
@@ -623,7 +623,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71200",
@@ -633,7 +633,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5-3) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5-3/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-107364",
@@ -643,7 +643,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112315",
@@ -653,7 +653,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112316",
@@ -663,7 +663,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112317",
@@ -673,7 +673,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112318",
@@ -683,7 +683,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112319",
@@ -693,7 +693,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112320",
@@ -703,7 +703,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112321",
@@ -713,7 +713,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112322",
@@ -723,7 +723,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-112323",
@@ -733,7 +733,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-118380",
@@ -743,7 +743,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119079",
@@ -753,7 +753,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71199",
@@ -763,7 +763,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-71200",
@@ -773,7 +773,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS). No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Kerberos library (libkrb5support0) pulled in as a dependency of libcurl3t64-gnutls (git HTTPS); present since the 2026-11-05 image, CVE newly listed in the Trivy DB. No /etc/krb5.conf or KDC is configured; reachable when a remote negotiates GSSAPI/SPNEGO authentication. Use trusted HTTPS remotes only. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libkrb5support0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -783,7 +783,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -793,7 +793,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -803,7 +803,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -813,7 +813,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. liblastlog2-2 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/liblastlog2-2/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -823,7 +823,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -833,7 +833,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -843,7 +843,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -853,7 +853,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libmount1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libmount1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-9538",
@@ -863,7 +863,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libperl5.40 supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libperl5.40/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: fix_deferred (Debian postponed the fix); see docs/audit-2026-11-20/recheck.json. libperl5.40 supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libperl5.40/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -873,7 +873,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -883,7 +883,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -893,7 +893,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -903,7 +903,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libsmartcols1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsmartcols1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119373",
@@ -913,7 +913,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119374",
@@ -923,7 +923,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-119379",
@@ -933,7 +933,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. SQLite library, not a configured database server. A native consumer can still open untrusted databases, so avoid untrusted database files; do not infer zero exposure from no application server. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-16742",
@@ -943,7 +943,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Systemd client library; this image starts a development shell, not systemd as PID 1. Library APIs remain callable by processes, so lack of a daemon does not eliminate library exposure. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsystemd0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Systemd client library; this image starts a development shell, not systemd as PID 1. Library APIs remain callable by processes, so lack of a daemon does not eliminate library exposure. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libsystemd0/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2025-69720",
@@ -953,7 +953,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libtinfo6 supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libtinfo6/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libtinfo6 supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libtinfo6/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-16742",
@@ -963,7 +963,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Device enumeration client library, not a udev daemon. Containers still see allowed host devices; avoid extra device mounts/privileged mode and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libudev1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Device enumeration client library, not a udev daemon. Containers still see allowed host devices; avoid extra device mounts/privileged mode and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libudev1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -973,7 +973,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -983,7 +983,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -993,7 +993,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -1003,7 +1003,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. libuuid1 is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/libuuid1/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2013-7445",
@@ -1013,7 +1013,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2019-19449",
@@ -1023,7 +1023,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2019-19814",
@@ -1033,7 +1033,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2021-3847",
@@ -1043,7 +1043,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2021-3864",
@@ -1053,7 +1053,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2024-21803",
@@ -1063,7 +1063,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2024-21963",
@@ -1073,7 +1073,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2024-58015",
@@ -1083,7 +1083,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-0004",
@@ -1093,7 +1093,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-23102",
@@ -1103,7 +1103,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-31568",
@@ -1113,7 +1113,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-46279",
@@ -1123,7 +1123,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-72042",
@@ -1133,7 +1133,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-89675",
@@ -1143,7 +1143,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-90315",
@@ -1153,7 +1153,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-98118",
@@ -1163,7 +1163,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-98364",
@@ -1173,7 +1173,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-99272",
@@ -1183,7 +1183,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-99387",
@@ -1193,7 +1193,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -1203,7 +1203,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -1213,7 +1213,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -1223,7 +1223,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -1233,7 +1233,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. login is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/login/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -1243,7 +1243,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -1253,7 +1253,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -1263,7 +1263,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -1273,7 +1273,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. mount is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/mount/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2025-69720",
@@ -1283,7 +1283,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). ncurses-base supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/ncurses-base/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. ncurses-base supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/ncurses-base/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2025-69720",
@@ -1293,7 +1293,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). ncurses-bin supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/ncurses-bin/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. ncurses-bin supports terminal capabilities and interactive tools. Terminal control sequences and terminfo inputs remain possible inputs; use trusted terminal definitions and retain the finding. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/ncurses-bin/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-9538",
@@ -1303,7 +1303,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). perl supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: fix_deferred (Debian postponed the fix); see docs/audit-2026-11-20/recheck.json. perl supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-9538",
@@ -1313,7 +1313,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). perl-base supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl-base/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: fix_deferred (Debian postponed the fix); see docs/audit-2026-11-20/recheck.json. perl-base supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl-base/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-9538",
@@ -1323,7 +1323,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). perl-modules-5.40 supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl-modules-5.40/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: fix_deferred (Debian postponed the fix); see docs/audit-2026-11-20/recheck.json. perl-modules-5.40 supplies Perl runtime/components used by development tooling. Executing untrusted scripts or repository hooks can exercise them; do not run untrusted hooks or programs. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/perl-modules-5.40/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-96512",
@@ -1333,7 +1333,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Developer privilege tool with deliberately configured NOPASSWD root inside the container. Do not treat the vscode/root split as a security boundary or run untrusted projects; host/container escape consequences still require review. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/sudo/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Developer privilege tool with deliberately configured NOPASSWD root inside the container. Do not treat the vscode/root split as a security boundary or run untrusted projects; host/container escape consequences still require review. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/sudo/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -1343,7 +1343,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78408",
@@ -1353,7 +1353,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78409",
@@ -1363,7 +1363,7 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
       "VulnerabilityID": "CVE-2026-78410",
@@ -1373,7 +1373,8 @@
       "Class": "os-pkgs",
       "Type": "debian",
       "kind": "unfixed",
-      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     }
-  ]
+  ],
+  "approval": "PENDING: the maintainer must approve this re-evaluation and the 2026-12-04 due date in the PR review. A green CI gate is not acceptance."
 }

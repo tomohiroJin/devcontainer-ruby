@@ -38,8 +38,6 @@
 3. `Dev Containers` 拡張機能を使ってコンテナ内で開発環境を起動します。
 4. コンテナ起動後、`scripts/setup.sh` が Ruby の実版を照合し、コミット済み lockfile に従って依存をインストールします。
 
-VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統一しています。現在の Ruby/RSpec ファイルはデバッグ構成から起動できます。
-
 5. 動作確認として、コンテナのターミナルで以下を実行します（CI でも同じものを実行しています）。
 
    ```bash
@@ -48,7 +46,9 @@ VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統�
    bundle exec ruby scripts/test_editor_features.rb
    ```
 
-   最後のコマンドは Ruby LSP の補完・定義ジャンプ・RuboCop 整形/診断と rdbg のブレークポイントをヘッドレスで検証します。
+   最後のコマンドは Ruby LSP の補完・定義ジャンプ・RuboCop 整形/診断、rdbg のブレークポイント、`.vscode/launch.json` のデバッグ構成の起動をヘッドレスで検証します（VS Code の GUI 操作の代わりではありません）。
+
+VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統一しています。現在の Ruby ファイル・RSpec ファイルは、実行とデバッグの「Debug current Ruby file」「Debug RSpec current file」から起動できます（Bundler の binstub `bin/rdbg` 経由）。
 
 Dev Container では `BUNDLE_APP_CONFIG` をこのリポジトリの `.bundle` に向けています（公式 Ruby イメージの既定は全プロジェクト共通の `/usr/local/bundle`）。そのため、同じコンテナ内で別ディレクトリの Gemfile を扱うと、このリポジトリの `path vendor/bundle` / `frozen true` 設定が適用されます。コンテナはこのリポジトリ専用として使ってください。更新方針、バージョン一覧、監査・検証の記録は [保守記録](docs/maintenance.md) を参照してください。
 

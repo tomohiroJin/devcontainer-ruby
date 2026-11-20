@@ -7,6 +7,7 @@
 #
 #   bundle exec ruby scripts/test_editor_features.rb
 
+require 'bundler'
 require 'json'
 require 'open3'
 require 'tmpdir'
@@ -178,12 +179,14 @@ def rubocop_checks(client)
   ]
 end
 
+DEBUG_ENV = { 'RUBY_DEBUG_NO_COLOR' => '1', 'RUBY_DEBUG_NO_RELINE' => '1' }.freeze
+LAUNCH = JSON.parse(File.read(File.join(ROOT, '.vscode', 'launch.json'))).fetch('configurations')
+
 def debugger_result
   Dir.mktmpdir do |dir|
     script = File.join(dir, 'debug_target.rb')
     File.write(script, "value = 6 * 7\nputs value\n")
-    env = { 'RUBY_DEBUG_NO_COLOR' => '1', 'RUBY_DEBUG_NO_RELINE' => '1' }
-    output, = Open3.capture2e(env, 'bundle', 'exec', 'rdbg', '-e', "break #{script}:2 ;; continue",
+    output, = Open3.capture2e(DEBUG_ENV, File.join(ROOT, 'bin', 'rdbg'), '-e', "break #{script}:2 ;; continue",
                               script, chdir: ROOT, stdin_data: "p value\ncontinue\n")
     check('rdbg stops at a breakpoint and evaluates a local') do
       output.include?("Stop by #0  BP - Line  #{script}:2") && output.include?('=> 42')
@@ -191,5 +194,33 @@ def debugger_result
   end
 end
 
-results = lsp_results + [debugger_result]
+# Builds the command line vscode-rdbg uses for a launch configuration
+# (ruby/vscode-rdbg src/extension.ts getExecCommands/getUnixRdbgArgs), except
+# --nonstop instead of --stop-at-load because no DAP client attaches here.
+def launch_command(config, file, sock_path)
+  expand = ->(value) { value.gsub('${workspaceFolder}', ROOT).gsub('${file}', file) }
+  exec_command = [config.fetch('command', 'ruby'), expand.call(config.fetch('script')), *config.fetch('args', [])]
+  [expand.call(config.fetch('rdbgPath', 'rdbg')), '--command', '--open', '--nonstop', "--sock-path=#{sock_path}",
+   '--', *exec_command.join(' ').split]
+end
+
+def launch_results
+  attached = /DEBUGGER: Debugger can attach via UNIX domain socket/
+  targets = { 'Debug current Ruby file' => [File.join(ROOT, 'lib', 'my_project.rb'), attached],
+              'Debug RSpec current file' => [SPEC_PATH, /#{attached.source}.* 0 failures/m] }
+  targets.map do |name, (file, expected)|
+    config = LAUNCH.find { |c| c['name'] == name } or abort "launch.json has no #{name.inspect}"
+    Dir.mktmpdir do |dir|
+      # VS Code starts the debuggee outside `bundle exec`; drop this script's Bundler env.
+      output, status = Bundler.with_unbundled_env do
+        Open3.capture2e(DEBUG_ENV, *launch_command(config, file, File.join(dir, 'rdbg.sock')), chdir: ROOT)
+      end
+      check("launch.json #{name.inspect} starts and runs to completion") do
+        status.success? && output.match?(expected) && !output.include?('LoadError')
+      end || warn(output)
+    end
+  end
+end
+
+results = lsp_results + [debugger_result] + launch_results
 exit(results.all? ? 0 : 1)

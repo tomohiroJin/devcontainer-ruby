@@ -26,6 +26,13 @@ Gemfile の許容範囲とは別に、直接・推移的依存と Bundler はコ
 
 2026-11-20 時点で更新しなかった推移的依存: `diff-lcs` 2.0.0（rspec-expectations/mocks 3.13 系が `< 2.0` を要求）、`prism` 2.x（ruby-lsp 0.26.11 が `< 2.0` を要求）。上流の制約が外れた時点で Dependabot により更新する。
 
+**Ruby のパッチ更新は手動で同期する。** Dependabot（docker）は Dockerfile の `FROM` のタグ/digest だけを上げ、`.ruby-version` と `Gemfile.lock` の `RUBY VERSION` は追随しない。そのため Ruby のパッチ版が変わる Dependabot PR は、`scripts/setup.sh` の版照合で必ず CI が失敗する（意図した停止）。その PR の上で次の作業を同時に行い、CI と監査ゲートを通してからマージする。
+
+1. `.ruby-version` を新しい版に更新する。
+2. 新しい Ruby で `bundle lock --update --ruby` を実行し、`Gemfile.lock` を更新する。
+3. setup-ruby の固定 SHA が新しい版に対応しているか確認する。
+4. 同梱 JSON の版と、置き換えの要否を確認する。
+
 ## VS Code 拡張
 
 「デファクトスタンダード」は公式規格ではなく、保守されている提供元と機能の重複を避ける方針として扱う。Marketplace の登録と提供元を調査日に確認した。
@@ -46,9 +53,15 @@ bundle exec ruby scripts/test_editor_features.rb
 bundle exec bundle-audit check --update
 ```
 
-`scripts/test_editor_features.rb` は VS Code が使う Ruby LSP を stdio で起動し、`.vscode/settings.json` と同じ formatter/linter 設定で、spec から lib のクラスへの定義ジャンプ、定数補完、RuboCop による整形（保存時整形の実体）と診断、および rdbg のブレークポイント停止と変数評価を検証する。GUI 操作そのものの代替ではない。
+`scripts/test_editor_features.rb` は次の 7 項目を検証する。GUI 操作そのものの代替ではない（VS Code 拡張が使う composed bundle `.ruby-lsp/` の経路も通らない）。
 
-CI は push/PR/週次/手動で同じ検証を実行する。`workflow-lint` ジョブは actionlint 1.7.12 でワークフローを検査する。PR 以外（main への push・週次・手動）の実行は別々の concurrency グループで、互いにキャンセルしない。別ジョブで Dockerfile から最小イメージをビルドし、コンテナ内で依存を frozen install してテスト・gem 監査し、Trivy 0.76.2 で OS/同梱パッケージを検査する。postCreateCommand で作られるワークスペース内の gem はイメージ層に含まれないため、Gemfile.lock 全体の bundler-audit で別途検査する。
+- VS Code が使う Ruby LSP を stdio で起動し、`.vscode/settings.json` と同じ formatter/linter 設定で、spec から lib のクラスへの定義ジャンプ、定数補完、RuboCop による整形（保存時整形の実体）と診断を確認する。
+- rdbg のブレークポイント停止と変数評価を確認する。
+- `.vscode/launch.json` の 2 構成を、vscode-rdbg と同じコマンドラインで Bundler 環境の外から起動する。
+
+デバッグ構成は Bundler の binstub `bin/rdbg` を `rdbgPath` に指定する。PATH 上の `rdbg`（イメージ同梱の debug gem）で `bundle exec rspec` を起動すると、default gem と lockfile の版が衝突して起動に失敗するため。
+
+CI は push/PR/週次/手動で同じ検証を実行する。`workflow-lint` ジョブは actionlint 1.7.12 でワークフローを検査する。concurrency グループはイベント種別ごとに分かれ、push・週次・手動の実行が種別をまたいでキャンセルし合うことはない。`cancel-in-progress` は PR のみ有効。同じグループで待機中の run は、新しい run に置き換えられる（GitHub Actions の仕様。main への連続 push では中間の run が実行されないことがある）。別ジョブで Dockerfile から最小イメージをビルドし、コンテナ内で依存を frozen install してテスト・gem 監査し、Trivy 0.76.2 で OS/同梱パッケージを検査する。postCreateCommand で作られるワークスペース内の gem はイメージ層に含まれないため、Gemfile.lock 全体の bundler-audit で別途検査する。
 
 Critical/Highは全検出を保存し、[期限付き監査方針](ci-security-policy.md)に従って新規・修正可能・期限切れの項目を失敗させる。残件は CVE/GHSA・影響・回避策・担当・期限を記録して追跡する。根拠なしの ignore や一律の ignore-unfixed は使わない。
 
@@ -68,7 +81,7 @@ GUI の補完・定義ジャンプ・ブレークポイント・保存時整形�
 
 ### 2026-11-20 の再確認
 
-- Ruby 4.0.10（セキュリティリリース）・Bundler 4.1.0・gem の互換範囲内の更新を適用。`ruby:4.0.10-trixie` 上の非 root ユーザーで `scripts/setup.sh`（38 gems の frozen install）、RSpec **67 examples / 0 failures**、RuboCop **27 files / no offenses**、bundler-audit **0 件**（ruby-advisory-db `49bb1fbb`、2026-11-19）、`scripts/test_editor_features.rb` の 5 項目すべて成功。CI の Dev Container ジョブでも同じものを実行する。
+- Ruby 4.0.10（セキュリティリリース）・Bundler 4.1.0・gem の互換範囲内の更新を適用。`ruby:4.0.10-trixie` 上の非 root ユーザーで `scripts/setup.sh`（38 gems の frozen install）、RSpec **67 examples / 0 failures**、RuboCop **27 files / no offenses**、bundler-audit **0 件**（ruby-advisory-db `49bb1fbb`、2026-11-19）、`scripts/test_editor_features.rb` の全項目成功。CI の Dev Container ジョブでも同じものを実行する。
 - 同梱 JSON は 4.0.10 で 2.18.3 になったが、CVE-2026-33210（≥ 2.19.2 で修正）と CVE-2026-54696（≥ 2.19.9 で修正）の対象のため、JSON 3.1.0 への置き換えを継続。置き換え手順を 4.0.10 で実行し、読み込み元が json-3.1.0 であることを確認した。
-- Trivy 0.76.2（CI run [44761714650](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650)）: **Critical 0 / High 137（54 CVE）**、修正版の提供 0 件。期限 2026-11-12 の失効によりゲートは設計どおり失敗した。差分（解消 7 CVE、新規 24 CVE）と再評価は [残件一覧](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。
+- Trivy 0.76.2（CI run [44761714650](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650)）: **Critical 0 / High 137（54 CVE）**、修正版の提供 0 件。期限 2026-11-12 の失効によりゲートは設計どおり失敗した。差分（解消 7 CVE、DB 追加 24 CVE）と再評価、Trivy DB による CVE 別の再照合は [残件一覧](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。
 - この作業環境は deb.debian.org に到達できないため、Dev Container イメージ（apt 段を含む）のビルドとスキャンは CI で行った。
