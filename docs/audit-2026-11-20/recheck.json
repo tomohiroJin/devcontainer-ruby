@@ -1,5 +1,5 @@
 {
-  "purpose": "Independent re-check of the 137 baseline entries against the Trivy DB (Debian Security Tracker data). Input is an SBOM of the baseline's package/version pairs, NOT a scan of the image; the image scan is CI run 44761714650 / 44762695742.",
+  "purpose": "Debian status annotation for the 137 baseline entries from the Trivy DB (Debian Security Tracker data). Input is an SBOM built from the baseline's own package/version pairs and the DB is the same Trivy 0.76.2 / same-day DB as CI, so the match with the baseline is near-tautological and NOT independent evidence; the new information is the per-CVE Status. This is NOT a scan of the image; the image scans are CI runs 44761714650 / 44762695742.",
   "command": "docker run aquasec/trivy:0.76.2 sbom --scanners vuln --severity HIGH,CRITICAL --format json docs/audit-2026-11-20/baseline-packages.cdx.json",
   "trivy": "0.76.2 (aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb)",
   "trivy_db_updated_at": "2026-11-20T13:11:33Z",

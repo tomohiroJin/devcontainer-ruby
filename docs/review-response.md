@@ -47,5 +47,13 @@
 - **Bundler 4.1.0 と gem の更新**: rubocop 1.92.3、rubocop-ast 1.53.0、rspec 系 3.13 の最新パッチなど。diff-lcs 2.x と prism 2.x は上流の制約のため据え置き（[保守記録](maintenance.md)）。
 - **エディター機能のヘッドレス検証**: `scripts/test_editor_features.rb` を追加し CI の Dev Container 内で実行する。設定を壊すと失敗することを確認した（formatter/linter を `none` にすると整形・診断の 2 項目が FAIL）。
 - **監査ゲートのログ**: ブロック時に Class/Type/CVE/パッケージ/導入版/深刻度/修正版を出力し、ログだけで再評価に着手できるようにした。
-- **期限失効後の baseline 再評価**: 2026-11-12 の期限が失効し、CI は設計どおり失敗した。Ruby 4.0.10 イメージの CI スキャン結果（High 137 件、修正版 0 件）から baseline を作り直した。継続 53 件は、11-05 の露出評価をそのまま引き継いでいる。それに加えて、全 137 件について Trivy DB（Debian Security Tracker 由来）で CVE ごとの Debian 側の状態を再照合し、結果を各 reason と [recheck.json](audit-2026-11-20/recheck.json) に記録した。Debian の Web トラッカーと上流 advisory の個別閲覧はこの環境から到達できず、行っていない。CVE が追加された git/git-man と Kerberos ライブラリ（パッケージ自体は 11-05 から存在）は、依存経路と使用状況を確認して [露出評価](security-exposure.md) に追記した。期限は 2026-12-04。識別子の照合条件は緩めていない。**期限と残件の受け入れには、メンテナーによる PR レビューでの承認が必要（baseline の `approval` は PENDING）。CI の成功は受け入れの根拠ではない。**
+- **期限失効後の baseline 再評価**: 2026-11-12 の期限が失効し、CI は設計どおり失敗した。Ruby 4.0.10 イメージの CI スキャン結果（High 137 件、修正版 0 件）から baseline を作り直した。継続 53 件は、11-05 の露出評価をそのまま引き継いでいる。それに加えて、全 137 件に Trivy DB（Debian Security Tracker 由来、CI と同じ DB 版）から CVE ごとの Debian 側の状態を付記し、結果を各 reason と [recheck.json](audit-2026-11-20/recheck.json) に記録した。Debian の Web トラッカーと上流 advisory の個別閲覧はこの環境から到達できず、行っていない。CVE が追加された git/git-man と Kerberos ライブラリ（パッケージ自体は 11-05 から存在）は、依存経路と使用状況を確認して [露出評価](security-exposure.md) に追記した。期限は 2026-12-04。識別子の照合条件は緩めていない。**期限と残件の受け入れには、メンテナーによる PR レビューでの承認が必要（baseline の `approval` は PENDING）。CI の成功は受け入れの根拠ではない。**
 - **RSpec デバッグ構成の起動失敗（検証で発見）**: vscode-rdbg は `command` 指定時に PATH 上の `rdbg`（イメージ同梱の debug gem）で起動する。そのため、Bundler 4.1.0 の下では default gem の prettyprint 0.2.0 と lockfile の 0.2.1 が衝突し、`Gem::LoadError` になっていた。Bundler の binstub `bin/rdbg` を追加し、`launch.json` の両構成に `"rdbgPath": "${workspaceFolder}/bin/rdbg"` を指定した。`scripts/test_editor_features.rb` は launch.json から拡張と同じコマンドライン（[vscode-rdbg](https://github.com/ruby/vscode-rdbg/blob/dd16d14/src/extension.ts) の `getExecCommands`/`getUnixRdbgArgs`。DAP クライアントがないため `--stop-at-load` の代わりに `--nonstop`）を組み立て、Bundler 環境を外して実行する。`rdbgPath` を外すと FAIL することを確認した。VS Code GUI での起動は未確認。
+
+### 敵対的検証（再検証）の非ブロッキング指摘への対応
+
+- Ruby パッチ更新手順のコマンドを `bundle update --ruby`（frozen の一時解除を含む）に修正した。`bundle lock --update --ruby` は Bundler 4.1.0 では実行できない。
+- Trivy DB による状態の照合は、入力も DB も CI と同じで独立した証拠ではない。そのため「状態の付記」と表現を改めた。
+- `approval: PENDING` はゲートでは判定しない。承認時に承認者と日付へ書き換える運用を、PR のチェックリストに加えた。
+- artifact を取得できない場合の手順（ゲートのログと SBOM による照合）は、今回追加した方針変更である。メンテナーの判断事項として PR に明示した。
+- エディターテストで「Debug current Ruby file」を起動する際、vscode-rdbg の `rdbg.useBundler` の既定値（true）に合わせて `bundle exec ruby` を使うようにした。

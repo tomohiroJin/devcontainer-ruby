@@ -199,7 +199,9 @@ end
 # --nonstop instead of --stop-at-load because no DAP client attaches here.
 def launch_command(config, file, sock_path)
   expand = ->(value) { value.gsub('${workspaceFolder}', ROOT).gsub('${file}', file) }
-  exec_command = [config.fetch('command', 'ruby'), expand.call(config.fetch('script')), *config.fetch('args', [])]
+  # Without `command`, vscode-rdbg runs `bundle exec ruby` (rdbg.useBundler defaults to true and a Gemfile exists).
+  ruby = config.fetch('useBundler', true) ? 'bundle exec ruby' : 'ruby'
+  exec_command = [config.fetch('command', ruby), expand.call(config.fetch('script')), *config.fetch('args', [])]
   [expand.call(config.fetch('rdbgPath', 'rdbg')), '--command', '--open', '--nonstop', "--sock-path=#{sock_path}",
    '--', *exec_command.join(' ').split]
 end

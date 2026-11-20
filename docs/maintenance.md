@@ -29,7 +29,7 @@ Gemfile の許容範囲とは別に、直接・推移的依存と Bundler はコ
 **Ruby のパッチ更新は手動で同期する。** Dependabot（docker）は Dockerfile の `FROM` のタグ/digest だけを上げ、`.ruby-version` と `Gemfile.lock` の `RUBY VERSION` は追随しない。そのため Ruby のパッチ版が変わる Dependabot PR は、`scripts/setup.sh` の版照合で必ず CI が失敗する（意図した停止）。その PR の上で次の作業を同時に行い、CI と監査ゲートを通してからマージする。
 
 1. `.ruby-version` を新しい版に更新する。
-2. 新しい Ruby で `bundle lock --update --ruby` を実行し、`Gemfile.lock` を更新する。
+2. 新しい Ruby のコンテナで `bundle config set --local frozen false` を実行してから `bundle update --ruby` を実行し、`Gemfile.lock` の `RUBY VERSION` を更新する。終わったら `bundle config set --local frozen true` で frozen に戻す（`bundle lock --update --ruby` は Bundler 4.1.0 では `Unknown switches` になる）。
 3. setup-ruby の固定 SHA が新しい版に対応しているか確認する。
 4. 同梱 JSON の版と、置き換えの要否を確認する。
 
