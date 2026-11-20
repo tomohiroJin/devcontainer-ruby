@@ -1,6 +1,6 @@
 # 未修正パッケージの露出評価
 
-評価日: 2026-11-06 JST（監査実行日 2026-11-05 UTC）。対象は [監査記録](container-audit.json) と [厳密な baseline](../security/container-baseline.json) にある導入版のみ。全指摘の Debian 修正版は当該 Trivy DB で未提供。これは無影響の証拠ではない。CVE 別の公式情報は [残件一覧](security-follow-up.md) の advisory と [Debian security tracker](https://security-tracker.debian.org/tracker/) を照合する。新しい版・深刻度・CVE は別途評価する。
+評価日: 2026-11-06 JST（監査実行日 2026-11-05 UTC）、2026-11-20 再評価（CI run 44761714650）。対象は [監査記録](container-audit.json) と [厳密な baseline](../security/container-baseline.json) にある導入版のみ。全指摘の Debian 修正版は当該 Trivy DB で未提供。これは無影響の証拠ではない。CVE 別の公式情報は [残件一覧](security-follow-up.md) の advisory と [Debian security tracker](https://security-tracker.debian.org/tracker/) を照合する。新しい版・深刻度・CVE は別途評価する。
 
 以下は Dockerfile の導入パッケージ、[Debian のパッケージ内容](https://packages.debian.org/trixie/)、開発コンテナの起動方法に基づくパッケージ単位の評価。各 baseline entry の `reason` にもパッケージ別の内容を記録した。全 CVE の悪用可否を動的検証したという意味ではない。
 
@@ -10,14 +10,18 @@
 | sudo | [sudo 内容](https://packages.debian.org/trixie/amd64/sudo/filelist)、Dockerfile の NOPASSWD 設定 | 開発操作のためコンテナ内 root を意図的に許す。vscode/root の間を防御境界として扱えない。未知の Repository やスクリプトを実行しない。ホストへの影響まで防止できるとは断定しない |
 | bsdutils、login、mount、util-linux、libblkid1、liblastlog2-2、libmount1、libsmartcols1、libuuid1 | [util-linux 内容](https://packages.debian.org/trixie/amd64/util-linux/filelist)、[mount](https://packages.debian.org/trixie/amd64/mount/filelist)。ファイルシステム・ユーザーセッションの基盤 | 開発ツールから実行/呼び出し可能。ワークスペースのファイルやメタデータ、マウント操作が入力になる。追加の capability、privileged mode、不明なデバイス/マウントを与えない。到達不能とは扱わない |
 | libcurl3t64-gnutls | [内容](https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist)。Git の HTTPS クライアント依存 | 不正な remote 応答がライブラリへ到達し得る。信頼するリポジトリ/remote に限定する。TLS 検証を無効化しないことだけで全 CVE を回避できるとは言わない |
+| git、git-man（11-20 追加） | [git 内容](https://packages.debian.org/trixie/amd64/git/filelist)、[git-man 内容](https://packages.debian.org/trixie/amd64/git-man/filelist)。開発に必須の Git CLI | clone/fetch/checkout や hooks の実行で、remote 応答・リポジトリ内容が入力になる。信頼する remote/リポジトリに限定し、未知の hooks を実行しない。git-man は man ページのみ（`dpkg -L` で実行ファイルなし）で、指摘は git ソースパッケージ由来 |
+| libgssapi-krb5-2、libk5crypto3、libkrb5-3、libkrb5support0（11-20 追加） | Debian の依存関係 `git` → `libcurl3t64-gnutls` → `libgssapi-krb5-2` → krb5 系。`git-remote-http` が `libgssapi_krb5.so.2` / `libkrb5.so.3` をリンクする（`ldd` で確認） | Kerberos は未設定（`/etc/krb5.conf` なし、KDC なし）だが、HTTPS remote が GSSAPI/SPNEGO 認証を提示すると libcurl 経由でライブラリに到達し得る。信頼する HTTPS remote に限定する。未設定であることを無影響の根拠にしない |
 | libexpat1 | [XML パーサの共有ライブラリ](https://packages.debian.org/trixie/amd64/libexpat1/filelist) | 外部 XML を解析する native consumer が使う可能性がある。XML サービスを公開していないことだけでは不使用を証明しない。未知の XML を処理しない |
-| zlib1g | [圧縮ライブラリ](https://packages.debian.org/trixie/amd64/zlib1g/filelist) | Ruby や native tool による圧縮データの展開が入力経路。gem/アーカイブの取得元を限定する。信頼する取得元でも脆弱な実装自体のリスクは残る |
+| zlib1g | [圧縮ライブラリ](https://packages.debian.org/trixie/amd64/zlib1g/filelist) | 2026-11-20 の再スキャンで High 指摘なし（CVE-2026-76844 は解消）。以後は新規指摘として評価する |
 | libsqlite3-0 | [SQLite ライブラリ](https://packages.debian.org/trixie/amd64/libsqlite3-0/filelist) | DB サーバを起動していないが、native consumer は DB ファイルを開ける。未知の DB ファイルを扱わず、ライブラリが到達不能とは断定しない |
 | libacl1 | [ACL ライブラリ](https://packages.debian.org/trixie/amd64/libacl1/filelist) | ファイル操作ツールから権限メタデータを処理し得る。不明なファイルシステム/権限設定の取り込みを避ける |
 | libsystemd0、libudev1 | [systemd client](https://packages.debian.org/trixie/amd64/libsystemd0/filelist)、[udev client](https://packages.debian.org/trixie/amd64/libudev1/filelist) | コンテナは systemd/udev daemon ではなく開発プロセスを起動するが、共有ライブラリ API は利用可能。追加デバイス公開や privileged mode を避ける。daemon 不在をライブラリ無影響の根拠にしない |
 | libtinfo6、ncurses-base、ncurses-bin | [ncurses](https://packages.debian.org/trixie/amd64/ncurses-bin/filelist) の端末機能 | 対話操作の端末制御や terminfo が入力になる。未知の端末定義を読み込まない。対話用途に限定しても影響がゼロとはしない |
 | libperl5.40、perl、perl-base、perl-modules-5.40 | [Perl 内容](https://packages.debian.org/trixie/amd64/perl/filelist)。開発ツールや hooks から使用可能 | スクリプト/Repository hooks を実行すると interpreter に到達する。信頼しない hooks を実行しない。未使用の保証はしない |
 
-担当・追跡 Issue・2026-11-12 の期限は [残件一覧](security-follow-up.md) を保持する。期限はゲートで UTC 00:00（JST 09:00）から有効。正式な更新は [CI 方針](ci-security-policy.md) の人による再評価を必須とし、週次の自動延長は行わない。
+担当・追跡 Issue・期限（2026-11-12 から再評価により 2026-12-04 に更新）は [残件一覧](security-follow-up.md) を保持する。期限はゲートで当日 UTC 00:00（JST 09:00）から有効。正式な更新は [CI 方針](ci-security-policy.md) の人による再評価を必須とし、週次の自動延長は行わない。
 
 実物確認: `ruby-issue10-lean` 内の `dpkg-query -W` で Git が libcurl3t64-gnutls/libexpat1/zlib1g/perl に依存し、build-essential → libc6-dev → linux-libc-dev の依存関係を確認した。`dpkg -L linux-libc-dev` の内容は `/usr/include/` 配下のヘッダであり、プロセスの UID は1000だった。これは各 CVE の悪用実験を行ったという意味ではない。
+
+2026-11-20 の確認: 新規パッケージの依存関係・ファイル一覧・`ldd` は、同じ Debian 版（git 1:2.47.3-0+deb13u1、libcurl3t64-gnutls 8.14.1-2+deb13u7、krb5 1.21.3-5+deb13u1）を含む `ruby:4.0.10-trixie` で確認した。作業環境から deb.debian.org に到達できず Dev Container イメージ自体はローカルでビルドしていない。イメージ内容の一次証拠は CI のビルドと Trivy 結果である。

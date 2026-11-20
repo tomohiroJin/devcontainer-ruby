@@ -64,4 +64,11 @@ GUI の補完・定義ジャンプ・ブレークポイント・保存時整形�
 - bundler-audit **0.9.3**、ruby-advisory-db **516ea4757d5eec778c49af8371c23309c4b70f42**（更新 2026-11-04）で、直接・推移的依存の公開脆弱性は **0 件**。[JSON 結果](gem-audit.json)。
 - Dev Container CLI **0.90.0** で構成の読み取りを確認した。実イメージのビルドは Docker **29.9.2** で実施した。管理環境の TLS proxy CA は build secret / read-only mount で渡し、証明書検証を有効にしたまま検証した。
 
-- 最終イメージの Trivy 0.76.2: **Critical 0 / High 75**（37 CVE、修正版の提供なし）。[全指摘とイメージ ID](container-audit.json)、[担当・期限・追跡](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。CIは全指摘を保存し、期限付き監査方針に従って判定する。
+- （11-05）最終イメージの Trivy 0.76.2: **Critical 0 / High 75**（37 CVE、修正版の提供なし）。[全指摘とイメージ ID](container-audit.json)、[担当・期限・追跡](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。CIは全指摘を保存し、期限付き監査方針に従って判定する。
+
+### 2026-11-20 の再確認
+
+- Ruby 4.0.10（セキュリティリリース）・Bundler 4.1.0・gem の互換範囲内の更新を適用。`ruby:4.0.10-trixie` 上の非 root ユーザーで `scripts/setup.sh`（38 gems の frozen install）、RSpec **67 examples / 0 failures**、RuboCop **27 files / no offenses**、bundler-audit **0 件**（ruby-advisory-db `49bb1fbb`、2026-11-19）、`scripts/test_editor_features.rb` の 5 項目すべて成功。CI の Dev Container ジョブでも同じものを実行する。
+- 同梱 JSON は 4.0.10 で 2.18.3 になったが、CVE-2026-33210（≥ 2.19.2 で修正）と CVE-2026-54696（≥ 2.19.9 で修正）の対象のため、JSON 3.1.0 への置き換えを継続。置き換え手順を 4.0.10 で実行し、読み込み元が json-3.1.0 であることを確認した。
+- Trivy 0.76.2（CI run [44761714650](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650)）: **Critical 0 / High 137（54 CVE）**、修正版の提供 0 件。期限 2026-11-12 の失効によりゲートは設計どおり失敗した。差分（解消 7 CVE、新規 24 CVE）と再評価は [残件一覧](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。
+- この作業環境は deb.debian.org に到達できないため、Dev Container イメージ（apt 段を含む）のビルドとスキャンは CI で行った。

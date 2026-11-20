@@ -47,3 +47,4 @@
 - **Bundler 4.1.0 と gem の更新**: rubocop 1.92.3、rubocop-ast 1.53.0、rspec 系 3.13 の最新パッチなど。diff-lcs 2.x と prism 2.x は上流の制約のため据え置き（[保守記録](maintenance.md)）。
 - **エディター機能のヘッドレス検証**: `scripts/test_editor_features.rb` を追加し CI の Dev Container 内で実行する。設定を壊すと失敗することを確認した（formatter/linter を `none` にすると整形・診断の 2 項目が FAIL）。
 - **監査ゲートのログ**: ブロック時に Class/Type/CVE/パッケージ/導入版/深刻度/修正版を出力し、ログだけで再評価に着手できるようにした。
+- **期限失効後の baseline 再評価**: 2026-11-12 の期限が失効し、CI は設計どおり失敗した。Ruby 4.0.10 イメージの CI スキャン結果（High 137 件、修正版 0 件）から baseline を作り直した。継続 entry は既存の露出評価を引き継ぎ、新規パッケージ（git/git-man、Kerberos ライブラリ）は依存経路と使用状況を確認して [露出評価](security-exposure.md) に追記した。期限は 2026-12-04。期限だけを延ばした変更ではなく、識別子の照合条件も緩めていない。**期限と残件の受け入れはメンテナーが PR レビューで承認する必要がある。**
