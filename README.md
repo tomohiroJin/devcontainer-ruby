@@ -36,7 +36,21 @@
 
 2. VS Code でプロジェクトを開きます。
 3. `Dev Containers` 拡張機能を使ってコンテナ内で開発環境を起動します。
-4. コンテナ起動後、`postCreateCommand` により `bundle install` が自動で実行されます。
+4. コンテナ起動後、`scripts/setup.sh` が Ruby の実版を照合し、コミット済み lockfile に従って依存をインストールします。
+
+5. 動作確認として、コンテナのターミナルで以下を実行します（CI でも同じものを実行しています）。
+
+   ```bash
+   bundle exec rspec
+   bundle exec rubocop
+   bundle exec ruby scripts/test_editor_features.rb
+   ```
+
+   最後のコマンドは Ruby LSP の補完・定義ジャンプ・RuboCop 整形/診断、rdbg のブレークポイント、`.vscode/launch.json` のデバッグ構成の起動をヘッドレスで検証します（VS Code の GUI 操作の代わりではありません）。
+
+VS Code の推奨拡張は Ruby LSP・Ruby rdbg Debugger・EditorConfig に統一しています。現在の Ruby ファイル・RSpec ファイルは、実行とデバッグの「Debug current Ruby file」「Debug RSpec current file」から起動できます（Bundler の binstub `bin/rdbg` 経由）。
+
+Dev Container では `BUNDLE_APP_CONFIG` をこのリポジトリの `.bundle` に向けています（公式 Ruby イメージの既定は全プロジェクト共通の `/usr/local/bundle`）。そのため、同じコンテナ内で別ディレクトリの Gemfile を扱うと、このリポジトリの `path vendor/bundle` / `frozen true` 設定が適用されます。コンテナはこのリポジトリ専用として使ってください。更新方針、バージョン一覧、監査・検証の記録は [保守記録](docs/maintenance.md) を参照してください。
 
 ---
 
@@ -44,13 +58,15 @@
 
 | 項目 | バージョン / 内容 |
 |------|------------------|
-| Ruby | `4.0.3`（`.ruby-version` に固定） |
-| ベースイメージ | `mcr.microsoft.com/devcontainers/ruby:4-bookworm` |
+| Ruby | `4.0.10`（`.ruby-version` に固定） |
+| ベースイメージ | `ruby:4.0.10-slim-trixie`（digest 固定） + 必要な開発ツール |
+| Bundler | `4.1.0`（`Gemfile.lock` の `BUNDLED WITH` と一致） |
+| デバッガ | debug gem（rdbg） + Ruby rdbg Debugger 拡張 |
 | Language Server | [Ruby LSP](https://github.com/Shopify/ruby-lsp)（Shopify 製） |
 | Linter / Formatter | RuboCop（ruby-lsp 経由で利用） |
 | テスト | RSpec |
 | ドキュメント | RDoc |
-| CI | GitHub Actions（RuboCop + RSpec） |
+| CI | GitHub Actions（RuboCop・RSpec・gem/コンテナ監査） |
 
 Language Server は Ruby LSP に一本化しています（以前は Solargraph を併用していましたが廃止しました）。RuboCop の実行・フォーマットは Ruby LSP 経由で自動的に行われます。
 

@@ -1,34 +1,20 @@
 {
   "name": "Ruby Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/ruby:4-bookworm",
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
         "Shopify.ruby-lsp",
-        "EditorConfig.EditorConfig",
-        "eamodio.gitlens",
-        "GitHub.vscode-pull-request-github",
-        "mhutchie.git-graph",
-        "streetsidesoftware.code-spell-checker",
-        "MS-CEINTL.vscode-language-pack-ja",
-        "yzhang.markdown-all-in-one",
-        "shd101wyy.markdown-preview-enhanced",
-        "DavidAnson.vscode-markdownlint",
-        "oderwat.indent-rainbow",
-        "mosapride.zenkaku",
-        "aaron-bond.better-comments",
-        "shardulm94.trailing-spaces",
-        "GitHub.github-vscode-theme",
-        "ms-vscode.live-server",
-        "ms-vsliveshare.vsliveshare",
-        "GrapeCity.gc-excelviewer"
+        "KoichiSasada.vscode-rdbg",
+        "EditorConfig.EditorConfig"
       ]
     }
   },
-  "postCreateCommand": "bundle config set --local path 'vendor/bundle' && bundle install",
-  "remoteUser": "vscode"
+  "postCreateCommand": "bash scripts/setup.sh",
+  "remoteUser": "vscode",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "BUNDLE_APP_CONFIG": "${containerWorkspaceFolder}/.bundle"
+  }
 }

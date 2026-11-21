@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "rdbg",
+      "name": "Debug current Ruby file",
+      "request": "launch",
+      "rdbgPath": "${workspaceFolder}/bin/rdbg",
+      "script": "${file}",
+      "args": [],
+      "askParameters": false
+    },
+    {
+      "type": "rdbg",
+      "name": "Debug RSpec current file",
+      "request": "launch",
+      "rdbgPath": "${workspaceFolder}/bin/rdbg",
+      "command": "bundle exec rspec",
+      "script": "${file}",
+      "args": [],
+      "askParameters": false
+    }
+  ]
+}

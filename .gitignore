@@ -46,5 +46,5 @@
 # コンテナ関連ファイル (Dockerを使用している場合)
 docker-compose.override.yml
 
-# 一時的に利用することを想定しているのでロックファイルを除外
-Gemfile.lock
+# Python security-gate test bytecode
+/scripts/__pycache__/
