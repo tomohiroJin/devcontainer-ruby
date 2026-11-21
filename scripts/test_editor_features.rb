@@ -8,6 +8,7 @@
 #   bundle exec ruby scripts/test_editor_features.rb
 
 require 'bundler'
+require 'etc'
 require 'json'
 require 'open3'
 require 'tmpdir'
@@ -179,6 +180,20 @@ def rubocop_checks(client)
   ]
 end
 
+# The Ruby LSP VS Code extension runs `gem list ruby-lsp language_server-protocol prism rbs`
+# and, if anything is missing, `gem install ruby-lsp --env-shebang` (daily `gem update`) as
+# the remote user, outside the project bundle. That needs write access to GEM_HOME.
+GEM_HOME_PROBE = <<~RUBY
+  dirs = [Gem.dir, Gem.bindir] + %w[gems specifications extensions build_info cache doc plugins].map { File.join(Gem.dir, it) }
+  puts dirs.select { File.directory?(it) && !File.writable?(it) }
+RUBY
+
+def global_gem_install_result
+  blocked, = Bundler.with_unbundled_env { Open3.capture2('ruby', '-e', GEM_HOME_PROBE, chdir: ROOT) }
+  check('the Ruby LSP extension can install its global gems into GEM_HOME') { blocked.strip.empty? } ||
+    warn("not writable by #{Etc.getpwuid.name}: #{blocked.split.join(', ')}")
+end
+
 DEBUG_ENV = { 'RUBY_DEBUG_NO_COLOR' => '1', 'RUBY_DEBUG_NO_RELINE' => '1' }.freeze
 LAUNCH = JSON.parse(File.read(File.join(ROOT, '.vscode', 'launch.json'))).fetch('configurations')
 
@@ -224,5 +239,5 @@ def launch_results
   end
 end
 
-results = lsp_results + [debugger_result] + launch_results
+results = [global_gem_install_result] + lsp_results + [debugger_result] + launch_results
 exit(results.all? ? 0 : 1)

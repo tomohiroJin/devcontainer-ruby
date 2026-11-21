@@ -57,3 +57,12 @@
 - `approval: PENDING` はゲートでは判定しない。承認時に承認者と日付へ書き換える運用を、PR のチェックリストに加えた。
 - artifact を取得できない場合の手順（ゲートのログと SBOM による照合）は、今回追加した方針変更である。メンテナーの判断事項として PR に明示した。
 - エディターテストで「Debug current Ruby file」を起動する際、vscode-rdbg の `rdbg.useBundler` の既定値（true）に合わせて `bundle exec ruby` を使うようにした。
+
+### 利用者の起動で見つかった問題（2026-11-21）
+
+- **Ruby LSP 拡張の「Failed to setup the bundle」（`Gem::FilePermissionError`）**
+  - 原因: 拡張は起動時に `gem list ruby-lsp language_server-protocol prism rbs` を確認し、不足があれば remote user で `gem install ruby-lsp --env-shebang` を実行する（[ruby-lsp vscode/src/workspace.ts](https://github.com/Shopify/ruby-lsp/blob/ad2996a/vscode/src/workspace.ts) の `installOrUpdateServer`）。Dockerfile では root で gem をインストールしていたため、`GEM_HOME` 配下が root 所有の 755 になり、書き込みに失敗していた。
+  - 対応: `GEM_HOME` を固定 GID 2000 の `rubygems` グループに渡し、remote user をこのグループに加えた。VS Code が UID/GID を書き換えても、補助グループは残る。
+  - 確認: UID を 1001 に変えた状態で `gem install`/`gem update` が成功することを確認した。エディターテストに書き込み可否の検査を追加し、修正を外すと FAIL することも確認した。
+  - テストで見逃した理由: 従来のテストは `bundle exec ruby-lsp` を直接起動しており、拡張が行うグローバルインストールの手順を通っていなかった。
+- **既存コンテナの `docker start` 失敗**: Docker Desktop の WSL 連携で、バインドマウントの中継パスが再起動後に無くなったため。リポジトリ側の問題ではなく、コンテナの作り直しで解消した。

@@ -53,11 +53,14 @@ bundle exec ruby scripts/test_editor_features.rb
 bundle exec bundle-audit check --update
 ```
 
-`scripts/test_editor_features.rb` は次の 7 項目を検証する。GUI 操作そのものの代替ではない（VS Code 拡張が使う composed bundle `.ruby-lsp/` の経路も通らない）。
+`scripts/test_editor_features.rb` は次の 8 項目を検証する。GUI 操作そのものの代替ではない（VS Code 拡張が使う composed bundle `.ruby-lsp/` の経路も通らない）。
 
 - VS Code が使う Ruby LSP を stdio で起動し、`.vscode/settings.json` と同じ formatter/linter 設定で、spec から lib のクラスへの定義ジャンプ、定数補完、RuboCop による整形（保存時整形の実体）と診断を確認する。
 - rdbg のブレークポイント停止と変数評価を確認する。
+- Ruby LSP 拡張が起動時に行うグローバル gem のインストール（`gem install ruby-lsp --env-shebang`、1 日 1 回の `gem update`）のため、remote user が `GEM_HOME` に書き込めることを確認する。
 - `.vscode/launch.json` の 2 構成を、vscode-rdbg と同じコマンドラインで Bundler 環境の外から起動する。
+
+Dockerfile は `GEM_HOME`（`/usr/local/bundle`）を固定 GID 2000 の `rubygems` グループに渡し、remote user をこのグループに加える。root による `gem install` で配下が root 所有になると、Ruby LSP 拡張の `gem install ruby-lsp` が `Gem::FilePermissionError` で失敗するため（2026-11-21 に WSL 上で発生）。VS Code は remote user の UID/GID をホストのユーザーに合わせて書き換える（`updateRemoteUserUID`）。補助グループはそのまま残るので、UID 指定の chown ではなくグループで権限を与えている。UID を 1001 に変えた状態で `gem install`/`gem update` が成功することを確認した。
 
 デバッグ構成は Bundler の binstub `bin/rdbg` を `rdbgPath` に指定する。PATH 上の `rdbg`（イメージ同梱の debug gem）で `bundle exec rspec` を起動すると、default gem と lockfile の版が衝突して起動に失敗するため。
 
