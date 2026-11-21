@@ -8,7 +8,7 @@ main への push で走った CI run [44872905051](https://github.com/tomohiroJi
 - いずれもカーネル本体（iommufd、SCTP、MPTCP、XFS、GUP-fast など）の不具合。このイメージに入っているのはビルド用の UAPI ヘッダだけで、実行中のカーネルはホスト（WSL / Docker Desktop、CI ランナー）のもの。カーネル本体の修正はホスト側の更新で取り込む必要があり、コンテナの再ビルドでは解消しない。ヘッダは新しくコンパイルするプログラムに影響し得るため、無影響とは断定しない。
 - 14 件を baseline に追加した。合計は High **151 件（68 CVE）**、Critical 0 件、修正版の提供 0 件。期限は 2026-12-04 のまま。
 
-**追加分を含む再評価は、メンテナーが PR レビューで承認するまで確定しない。CI ゲートの成功は受け入れの根拠ではない**（baseline の `approval` は `PENDING`）。
+**2026-11-21 にメンテナー（tomohiroJin）が PR #13 のレビューで承認した。** 11-20 の再評価と追加分を合わせた 151 件、および期限 2026-12-04 が対象（baseline の `approval` に記録）。ゲートはこの欄を判定しないため、新規・変更・修正版の提供・期限切れは引き続き失敗する。
 
 ## 2026-11-20 の再評価
 
@@ -20,7 +20,7 @@ main への push で走った CI run [44872905051](https://github.com/tomohiroJi
 - 11-20 に追加された CVE（24 件）: git/git-man 3 件、Kerberos ライブラリ（libgssapi-krb5-2、libk5crypto3、libkrb5-3、libkrb5support0）14 件、libexpat1 1 件、libsqlite3-0 2 件、linux-libc-dev 4 件。いずれも修正版未提供。**パッケージ自体は 11-05 のイメージにも同じ版で含まれており**（Trivy の `pkg_num=164` は両 run で同じ、Dockerfile の apt 行も不変）、Trivy DB の更新で新たに CVE が付いたもの。Ruby 4.0.10 への更新が原因ではない。
 - 継続（30 CVE）: 11-05 と同じパッケージ・導入版・深刻度。linux-libc-dev は導入版が変わったため entry を作り直した。
 
-追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-12-04**（2 週間。12-05 の手動見直しの前日）。**この再評価と期限の再設定は、メンテナーが PR レビューで承認するまで確定しない。CI ゲートの成功は受け入れの根拠ではない**（baseline の `approval` は `PENDING`。ゲートはこの欄を判定しない）。修正完了まで Issue の完了条件は未充足として扱う。CVE が追加されたパッケージ（git/git-man、Kerberos ライブラリ）の露出評価は [露出評価](security-exposure.md) に追記した。
+追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-12-04**（2 週間。12-05 の手動見直しの前日）。この再評価と期限の再設定は、2026-11-21 にメンテナーが PR #13 で承認した（上記）。修正完了まで Issue の完了条件は未充足として扱う。CVE が追加されたパッケージ（git/git-man、Kerberos ライブラリ）の露出評価は [露出評価](security-exposure.md) に追記した。
 
 開発コンテナとして使い、外部へサービスを公開しない。未知の Repository や入力を実行しない。これは全 CVE の回避を保証する措置ではない。Git/sudo/build-essential は開発機能に必要なため保持した。
 

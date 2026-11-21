@@ -1516,6 +1516,6 @@
       "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     }
   ],
-  "approval": "PENDING: the maintainer must approve this re-evaluation (including the 14 linux-libc-dev entries added on 2026-11-21) and the 2026-12-04 due date in the PR review. A green CI gate is not acceptance.",
+  "approval": "APPROVED by tomohiroJin (repository maintainer) on 2026-11-21 in the review of PR #13: accepted all 151 unfixed entries (including the 14 linux-libc-dev entries added on 2026-11-21) and the 2026-12-04 due date. The gate does not read this field; any new, changed, fixable or expired finding still blocks.",
   "updated_on": "2026-11-21"
 }
