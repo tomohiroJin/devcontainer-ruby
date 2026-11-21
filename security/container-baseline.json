@@ -3,7 +3,7 @@
   "tracking_issue": "https://github.com/tomohiroJin/devcontainer-ruby/issues/10",
   "review_due": "2026-12-04",
   "reviewed_on": "2026-11-20",
-  "source": "Gate log of https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650 (artifact ruby-container-audit)",
+  "source": "Gate log of https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650 (artifact ruby-container-audit); 14 linux-libc-dev entries added from the gate log of https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44872905051",
   "findings": [
     {
       "VulnerabilityID": "CVE-2026-76642",
@@ -1196,6 +1196,146 @@
       "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. Build-time Linux UAPI headers, not a bundled or running kernel. Headers can influence newly compiled programs, so kernel CVEs still require applicability review; the host kernel is outside this image audit. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     },
     {
+      "VulnerabilityID": "CVE-2026-99568",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (out-of-bounds memory write in iommufd via missing bounds check in IOVA bitmap); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99583",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Denial of Service via use-after-free in SCTP socket migration); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99590",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Ceph: out-of-bounds write via oversized inline data); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99591",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (hypervisor memory corruption via AMD IOMMU device table out-of-bounds read); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99634",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Use-after-free in MPTCP via TCP Fast Open on MP_JOIN subflows); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99636",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Denial of Service via negative TCP header offset); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99659",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Memory corruption via integer truncation during TLB range flushing); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99661",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Memory corruption via integer overflow in GUP-fast); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99662",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Out-of-bounds write in GUP-fast via zero page count); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99677",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (XFS: information disclosure via improper pNFS layout range validation); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99679",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (xfs: Denial of Service via invalid pNFS LAYOUTCOMMIT range); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99707",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (privilege escalation via missing TLB flush in khugepaged); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99754",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (Denial of Service via unterminated iSCSI session identifier); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
+      "VulnerabilityID": "CVE-2026-99758",
+      "PkgName": "linux-libc-dev",
+      "InstalledVersion": "6.12.117-1",
+      "Severity": "HIGH",
+      "Class": "os-pkgs",
+      "Type": "debian",
+      "kind": "unfixed",
+      "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44872905051 (main, 2026-11-21). Debian Security Tracker status via Trivy DB 2026-11-21T01:10Z: affected (no fixed version published); see docs/audit-2026-11-21/recheck.json. Kernel runtime bug (sctp: Denial of Service via missing chunk padding check in sctp_init_cause()); this image ships only build-time Linux UAPI headers, not a bundled or running kernel. The running kernel is the host's (WSL/Docker Desktop or the CI runner) and must be patched there; headers can still influence newly compiled programs, so no claim of non-applicability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
+    },
+    {
       "VulnerabilityID": "CVE-2026-76642",
       "PkgName": "login",
       "InstalledVersion": "1:4.16.0-2+really2.41.5-0+deb13u1",
@@ -1376,5 +1516,6 @@
       "reason": "No vendor FixedVersion in the Trivy 0.76.2 report of CI run 44761714650 (2026-11-20). Debian Security Tracker status via Trivy DB 2026-11-20T13:11Z: affected (no fixed version published); see docs/audit-2026-11-20/recheck.json. util-linux is part of util-linux/login filesystem and session tooling. Development commands can invoke these tools or libraries against workspace metadata; avoid untrusted mounts and additional container capabilities. No claim of unreachability is made. Evidence and limits: docs/security-exposure.md; package contents: https://packages.debian.org/trixie/amd64/util-linux/filelist. Reassess by 2026-12-04; identity/version/severity remain exact."
     }
   ],
-  "approval": "PENDING: the maintainer must approve this re-evaluation and the 2026-12-04 due date in the PR review. A green CI gate is not acceptance."
+  "approval": "PENDING: the maintainer must approve this re-evaluation (including the 14 linux-libc-dev entries added on 2026-11-21) and the 2026-12-04 due date in the PR review. A green CI gate is not acceptance.",
+  "updated_on": "2026-11-21"
 }

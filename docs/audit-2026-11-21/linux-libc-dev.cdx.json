@@ -1,0 +1,56 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.5",
+ "serialNumber": "urn:uuid:893e8656-6150-43a8-a96a-fdac6d304644",
+ "version": 1,
+ "metadata": {
+  "component": {
+   "bom-ref": "root",
+   "type": "container",
+   "name": "ruby-development-audit"
+  }
+ },
+ "components": [
+  {
+   "bom-ref": "os",
+   "type": "operating-system",
+   "name": "debian",
+   "version": "13.7"
+  },
+  {
+   "bom-ref": "pkg:deb/debian/linux-libc-dev@6.12.117-1?arch=amd64&distro=debian-13.7",
+   "type": "library",
+   "name": "linux-libc-dev",
+   "version": "6.12.117-1",
+   "purl": "pkg:deb/debian/linux-libc-dev@6.12.117-1?arch=amd64&distro=debian-13.7",
+   "properties": [
+    {
+     "name": "aquasecurity:trivy:SrcName",
+     "value": "linux"
+    },
+    {
+     "name": "aquasecurity:trivy:SrcVersion",
+     "value": "6.12.117-1"
+    },
+    {
+     "name": "aquasecurity:trivy:PkgType",
+     "value": "debian"
+    }
+   ]
+  }
+ ],
+ "dependencies": [
+  {
+   "ref": "root",
+   "dependsOn": [
+    "os"
+   ]
+  },
+  {
+   "ref": "os",
+   "dependsOn": [
+    "pkg:deb/debian/linux-libc-dev@6.12.117-1?arch=amd64&distro=debian-13.7"
+   ]
+  }
+ ]
+}
