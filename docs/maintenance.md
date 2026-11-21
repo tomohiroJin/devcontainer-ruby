@@ -88,3 +88,7 @@ GUI の補完・定義ジャンプ・ブレークポイント・保存時整形�
 - 同梱 JSON は 4.0.10 で 2.18.3 になったが、CVE-2026-33210（≥ 2.19.2 で修正）と CVE-2026-54696（≥ 2.19.9 で修正）の対象のため、JSON 3.1.0 への置き換えを継続。置き換え手順を 4.0.10 で実行し、読み込み元が json-3.1.0 であることを確認した。
 - Trivy 0.76.2（CI run [44761714650](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650)）: **Critical 0 / High 137（54 CVE）**、修正版の提供 0 件。期限 2026-11-12 の失効によりゲートは設計どおり失敗した。差分（解消 7 CVE、DB 追加 24 CVE）と再評価、Trivy DB による CVE 別の再照合は [残件一覧](security-follow-up.md)。脆弱性対応を完了と判断できる状態ではない。
 - この作業環境は deb.debian.org に到達できないため、Dev Container イメージ（apt 段を含む）のビルドとスキャンは CI で行った。
+
+### 2026-11-21 の追加
+
+PR #12 のマージ後、main の CI で、Trivy DB の更新により linux-libc-dev 6.12.117-1 の High が 14 件、新規として検出された。修正版は出ておらず、Debian の状態は `affected`。イメージの内容は変わっていない。baseline に追加し、合計は High 151 件（68 CVE）になった。期限は 2026-12-04 のまま。詳細は [残件一覧](security-follow-up.md)。

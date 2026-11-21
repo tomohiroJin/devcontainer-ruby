@@ -6,7 +6,7 @@
 
 | パッケージ群 | 使用・証拠 | 露出と制約 |
 | --- | --- | --- |
-| linux-libc-dev | [UAPI ヘッダ一覧](https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist)。build-essential 経由のビルド依存 | イメージ内で稼働するカーネルではなくビルド用ヘッダ。実行時カーネルはホストが管理する。ただしヘッダ定義を取り込んだ生成プログラムへの影響は別途評価が必要。カーネル由来 CVE を一律に無影響とはしない |
+| linux-libc-dev | [UAPI ヘッダ一覧](https://packages.debian.org/trixie/amd64/linux-libc-dev/filelist)。build-essential 経由のビルド依存 | イメージ内で稼働するカーネルではなくビルド用ヘッダ。実行時カーネルはホストが管理する。ただしヘッダ定義を取り込んだ生成プログラムへの影響は別途評価が必要。カーネル由来 CVE を一律に無影響とはしない。カーネル本体の不具合（2026-11-21 追加の 14 件を含む）は、ホスト（WSL / Docker Desktop、CI ランナー）のカーネル更新で修正を取り込む必要があり、コンテナの再ビルドでは解消しない |
 | sudo | [sudo 内容](https://packages.debian.org/trixie/amd64/sudo/filelist)、Dockerfile の NOPASSWD 設定 | 開発操作のためコンテナ内 root を意図的に許す。vscode/root の間を防御境界として扱えない。未知の Repository やスクリプトを実行しない。ホストへの影響まで防止できるとは断定しない |
 | bsdutils、login、mount、util-linux、libblkid1、liblastlog2-2、libmount1、libsmartcols1、libuuid1 | [util-linux 内容](https://packages.debian.org/trixie/amd64/util-linux/filelist)、[mount](https://packages.debian.org/trixie/amd64/mount/filelist)。ファイルシステム・ユーザーセッションの基盤 | 開発ツールから実行/呼び出し可能。ワークスペースのファイルやメタデータ、マウント操作が入力になる。追加の capability、privileged mode、不明なデバイス/マウントを与えない。到達不能とは扱わない |
 | libcurl3t64-gnutls | [内容](https://packages.debian.org/trixie/amd64/libcurl3t64-gnutls/filelist)。Git の HTTPS クライアント依存 | 不正な remote 応答がライブラリへ到達し得る。信頼するリポジトリ/remote に限定する。TLS 検証を無効化しないことだけで全 CVE を回避できるとは言わない |

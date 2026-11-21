@@ -1,6 +1,16 @@
 # 未解消のコンテナ監査指摘
 
-## 2026-11-20 の再評価（現行）
+## 2026-11-21 の追加（現行）
+
+main への push で走った CI run [44872905051](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44872905051) で、監査ゲートが linux-libc-dev 6.12.117-1 の High を 14 件、新規として検出した。
+- 前回 PR の最終実行（04:27 UTC）から main の実行（05:54 UTC）の間に Trivy DB が更新され、2026-11-20 公開のカーネル CVE が追加されたもの。イメージの内容は変わっていない（パッケージ数 164、Debian 13.7）。
+- 14 件とも修正版は出ていない。Trivy DB（2026-11-21T01:10Z 更新、Debian Security Tracker 由来）での Debian の状態は 14 件とも `affected`。記録: [recheck.json](audit-2026-11-21/recheck.json)。この照合は CI と同じ系統の DB による状態の付記で、独立した証拠ではない。
+- いずれもカーネル本体（iommufd、SCTP、MPTCP、XFS、GUP-fast など）の不具合。このイメージに入っているのはビルド用の UAPI ヘッダだけで、実行中のカーネルはホスト（WSL / Docker Desktop、CI ランナー）のもの。カーネル本体の修正はホスト側の更新で取り込む必要があり、コンテナの再ビルドでは解消しない。ヘッダは新しくコンパイルするプログラムに影響し得るため、無影響とは断定しない。
+- 14 件を baseline に追加した。合計は High **151 件（68 CVE）**、Critical 0 件、修正版の提供 0 件。期限は 2026-12-04 のまま。
+
+**2026-11-21 にメンテナー（tomohiroJin）が PR #13 のレビューで承認した。** 11-20 の再評価と追加分を合わせた 151 件、および期限 2026-12-04 が対象（baseline の `approval` に記録）。ゲートはこの欄を判定しないため、新規・変更・修正版の提供・期限切れは引き続き失敗する。
+
+## 2026-11-20 の再評価
 
 対象: PR の CI run [44761714650](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44761714650)（失敗、期限切れ）と [44762695742](https://github.com/tomohiroJin/devcontainer-ruby/actions/runs/44762695742)（baseline 更新後）。`ruby:4.0.10-slim-trixie` ベース、イメージ config digest `sha256:98aeab17de98e1562cdc2a918990dba7395e094cc37652864039826ff67928d4`、Debian 13.7、パッケージ 164、Trivy 0.76.2。Critical **0 件**、High **137 件（54 CVE）**。修正バージョンが DB に掲載されている指摘は **0 件**（ゲート出力に `fixed-in=` なし）。全件の識別子は [baseline](../security/container-baseline.json) に、生の Trivy JSON は両 run の `ruby-container-audit` artifact（GitHub の保持期間 90 日）にある。この作業環境からは artifact ストレージに到達できなかったため、ゲートのログに出力された Class/Type/CVE/パッケージ/導入版/深刻度から baseline を作成した。
 
@@ -10,7 +20,7 @@
 - 11-20 に追加された CVE（24 件）: git/git-man 3 件、Kerberos ライブラリ（libgssapi-krb5-2、libk5crypto3、libkrb5-3、libkrb5support0）14 件、libexpat1 1 件、libsqlite3-0 2 件、linux-libc-dev 4 件。いずれも修正版未提供。**パッケージ自体は 11-05 のイメージにも同じ版で含まれており**（Trivy の `pkg_num=164` は両 run で同じ、Dockerfile の apt 行も不変）、Trivy DB の更新で新たに CVE が付いたもの。Ruby 4.0.10 への更新が原因ではない。
 - 継続（30 CVE）: 11-05 と同じパッケージ・導入版・深刻度。linux-libc-dev は導入版が変わったため entry を作り直した。
 
-追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-12-04**（2 週間。12-05 の手動見直しの前日）。**この再評価と期限の再設定は、メンテナーが PR レビューで承認するまで確定しない。CI ゲートの成功は受け入れの根拠ではない**（baseline の `approval` は `PENDING`。ゲートはこの欄を判定しない）。修正完了まで Issue の完了条件は未充足として扱う。CVE が追加されたパッケージ（git/git-man、Kerberos ライブラリ）の露出評価は [露出評価](security-exposure.md) に追記した。
+追跡: [Issue #10](https://github.com/tomohiroJin/devcontainer-ruby/issues/10)。担当: Repository メンテナー。次回確認期限: **2026-12-04**（2 週間。12-05 の手動見直しの前日）。この再評価と期限の再設定は、2026-11-21 にメンテナーが PR #13 で承認した（上記）。修正完了まで Issue の完了条件は未充足として扱う。CVE が追加されたパッケージ（git/git-man、Kerberos ライブラリ）の露出評価は [露出評価](security-exposure.md) に追記した。
 
 開発コンテナとして使い、外部へサービスを公開しない。未知の Repository や入力を実行しない。これは全 CVE の回避を保証する措置ではない。Git/sudo/build-essential は開発機能に必要なため保持した。
 
@@ -70,6 +80,20 @@
 | [CVE-2026-119373](https://security-tracker.debian.org/tracker/CVE-2026-119373) | libsqlite3-0 | 継続 | affected | sqlite: sqlite: Denial of service via heap-based buffer overflow in FTS5 |
 | [CVE-2026-119374](https://security-tracker.debian.org/tracker/CVE-2026-119374) | libsqlite3-0 | 11-20 に DB 追加 | affected | sqlite: sqlite: Arbitrary code execution via corrupted FTS5 index |
 | [CVE-2026-119379](https://security-tracker.debian.org/tracker/CVE-2026-119379) | libsqlite3-0 | 11-20 に DB 追加 | affected | sqlite: sqlite: Arbitrary code execution via crafted session changesets |
+| [CVE-2026-99568](https://security-tracker.debian.org/tracker/CVE-2026-99568) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: out-of-bounds memory write in iommufd via missing bounds check in IOVA bitmap |
+| [CVE-2026-99583](https://security-tracker.debian.org/tracker/CVE-2026-99583) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Denial of Service via use-after-free in SCTP socket migration |
+| [CVE-2026-99590](https://security-tracker.debian.org/tracker/CVE-2026-99590) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Ceph: out-of-bounds write via oversized inline data |
+| [CVE-2026-99591](https://security-tracker.debian.org/tracker/CVE-2026-99591) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: hypervisor memory corruption via AMD IOMMU device table out-of-bounds read |
+| [CVE-2026-99634](https://security-tracker.debian.org/tracker/CVE-2026-99634) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Use-after-free in MPTCP via TCP Fast Open on MP_JOIN subflows |
+| [CVE-2026-99636](https://security-tracker.debian.org/tracker/CVE-2026-99636) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Denial of Service via negative TCP header offset |
+| [CVE-2026-99659](https://security-tracker.debian.org/tracker/CVE-2026-99659) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Memory corruption via integer truncation during TLB range flushing |
+| [CVE-2026-99661](https://security-tracker.debian.org/tracker/CVE-2026-99661) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Memory corruption via integer overflow in GUP-fast |
+| [CVE-2026-99662](https://security-tracker.debian.org/tracker/CVE-2026-99662) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Out-of-bounds write in GUP-fast via zero page count |
+| [CVE-2026-99677](https://security-tracker.debian.org/tracker/CVE-2026-99677) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: XFS: information disclosure via improper pNFS layout range validation |
+| [CVE-2026-99679](https://security-tracker.debian.org/tracker/CVE-2026-99679) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: xfs: Denial of Service via invalid pNFS LAYOUTCOMMIT range |
+| [CVE-2026-99707](https://security-tracker.debian.org/tracker/CVE-2026-99707) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: privilege escalation via missing TLB flush in khugepaged |
+| [CVE-2026-99754](https://security-tracker.debian.org/tracker/CVE-2026-99754) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: Denial of Service via unterminated iSCSI session identifier |
+| [CVE-2026-99758](https://security-tracker.debian.org/tracker/CVE-2026-99758) | linux-libc-dev | 11-21 に DB 追加 | affected | kernel: kernel: sctp: Denial of Service via missing chunk padding check in sctp_init_cause() |
 
 ## 2026-11-05 の記録（履歴）
 
